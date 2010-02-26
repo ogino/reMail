@@ -1,4 +1,22 @@
 syntax:glob
 
+# Xcode user state
+*.mode1v3
+*.pbxuser
+
+# Random stuff
 *~
+.DS_Store
+
+# Build products
+binaries
 build
+build-crypto-deps/*.log
+build-crypto-deps/binaries
+build-crypto-deps/cyrus-sasl/*.log
+build-crypto-deps/cyrus-sasl/*.tar.gz
+build-crypto-deps/cyrus-sasl/iPhone*
+build-crypto-deps/openssl/*.log
+build-crypto-deps/openssl/*.tar.gz
+build-crypto-deps/openssl/iPhone*
+
