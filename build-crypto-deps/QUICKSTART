@@ -1,0 +1,3 @@
+$ sh build-all-deps.sh `pwd`/binaries # (will take about an hour)
+$ open ImapClient3.0/ImapClient3.0.xcodeprj
+

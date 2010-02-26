@@ -1,0 +1,3 @@
+- libetpan configure.ac does not remove -Ox flag even when --enable-debug is 
+  used
+- test on real hardware

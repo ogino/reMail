@@ -1,0 +1,24 @@
+﻿/* A single strings file, whose title is specified in your preferences schema. The strings files provide the localized content to display to the user for each of your preferences. */
+
+"Account" = "Emailkonto";
+"Offline" = "Offline";
+"Don't sync emails" = "Nicht verbinden";
+"Username" = "Benutzer";
+"Password" = "Passwort";
+"Connect Interval" = "Verbindungsintervall";
+"Help us Promote reMail" = "reMail-Signatur in Emails";
+"reMail Signature" = "Signatur einfügen";
+"Help us Improve reMail" = "Diagnose-Infos an reMail schicken";
+"Send Diagnostics" = "Diagnose-Infos";
+"Search History" = "Suchverlauf";
+"Clear Search History" = "Verlauf löschen";
+"Account Type" = "Kontotyp";
+"Encryption" = "Verschlüsselung";
+"Authentication" = "Authentikationstyp";
+"Delete All Data" = "Alles löschen";
+"Attachment Cache" = "Anhänge löschen";
+"Clear Data" = "Daten löschen";
+"Reset reMail" = "Kompletter Reset von reMail";
+"Limit Download to Last Year" = "Nur neue Emails downloaden";
+"Only last 12 months" = "Nur letzte 12 Monate";
+"Debug: Log all calls" = "Debug: Alles loggen";

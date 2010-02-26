@@ -1,0 +1,350 @@
+﻿/* 
+   Localization.strings
+   ReMailIPhone
+
+   Created by Gabor Cselle on 7/12/09.
+   Translated by <Raymond Chenon, Michael Maillot, Christophe Dessimoz, Christophe Baillon>
+   
+   Copyright 2010 Google Inc.
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+  
+    http://www.apache.org/licenses/LICENSE-2.0
+   
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+   
+   THANKS SO MUCH FOR VOLUNTEERING TO TRANSLATE REMAIL!
+   Instructions: 
+   1. Add your name above
+   2. Replace the German strings on the right side with 
+      the Strings in your language.
+   3. If you have two ways to choose from in translating a
+      string, choose the shorter one (we have very
+      limited screen real estate :-)
+      
+   Gabor
+ */
+
+"reMail Search" = "Recherche reMail";
+
+"This version of reMail only supports Gmail accounts. For other account types, you need to purchase a different edition of reMail." =
+"Cette version ne supporte que les comptes Gmail. Pour d'autres clients email, vous devez acheter une autre édition de reMail.";
+
+"Validating login ..." = "Validation login ...";
+
+"Error connecting to server." = "Erreur de connexion au serveur.";
+"Error connecting to server. Try over Wifi." = "Erreur de connexion au serveur. Essayez WLAN.";
+"Wrong username or password." = "Identifiant ou mot de passe invalide.";
+
+"Logging into Account ..." = "Connexion au compte...";
+
+// Gmail sync
+"Getting folder list ..." = "Liste de dossiers ...";
+"Connect error: %@" = "Erreur de connexion: %@";
+"Invalid login. Fix in Accounts>%@" = "Identifiant invalide dans Comptes>%@";
+"Invalid credentials for %@" = "Login invalide pour %@";
+"List folders: %@" = "Liste des dossiers : %@";
+"All Mail folder not found" = "Dossier \'Tous les messages\' non trouvé";
+"All Mail folder unavailable" = "Dossier \'Tous les messages\' indisponible";
+"Folder: %@" = "Dossier : %";
+"Download All Mail?" = "Charger tous les emails?";
+"reMail can either download all mail from your Gmail account or let you select specific labels to download." = 
+ "reMail vous permet de charger tous les messages de votre compte Gmail ou de ne choisir que certains libellés.";
+"Select Labels" = "Libellés"; // This string needs to be extremely short - it's a button label [MM: This is how Google translates "labels" in french Gmail interface]
+"Get All Mail" = "Tous"; // This string needs to be extremely short - it's a button label [Google french equivalent of "All Mail" folder is "Tous les messages", but it is really long]
+
+// IMAP sync
+"Logging into %@ ..." = "Connexion sous %@ ...";
+"Getting message counts ..." = "Comptage de message ...";
+"Missing folder: %@" = "Dossier manquant: %@";
+"Counting folder: %@" = "Chargement dossiers pour %@";
+"Checking folders for %@" = "Scanne Ordner für %@";
+"Count error in %@: %@" = "Erreur de comptage %@: %@";
+"Error getting folder: %@" = "Erreur d'ouverture de : %@";
+"Error getting folders: %@" = "Erreur d'ouverture de : %@";
+
+// IMAP Folder Worker
+"Checking: %@" = "Ouverture : %@";
+"Folder count error: %@ %@" = "Erreur de décompte : %@ %@";
+"Empty folder: %@ %i/%i" = "Vider dossier ? %@ %i/%i";
+"Error at %i: %@" = "Erreur à %i: %@";
+"Connection to server lost" = "Connexion au serveur perdue";
+"Fetch problem at %i: %@" = "Problème de chargement à %i : %@";
+"Fetch error at %i: %@" = "Erreur de chargement à %i : %@";
+"Warning at (%i+%i): %@" = "Avertissement à (%i+%i) : %@";
+"Error fetching message %i: %@" = "Erreur de chargement du message %i : %@";
+"Downloading new mail in %@" = "Chargement nouveux emails en %@";
+"Downloading mail in %@" = "Chargement emails en %@";
+"Downloading mail in %@: %i of %i" = "Chargement email en %@: %i sur %i";
+"Downloading new mail in %@: %i of %i" = "Nouveaux emails en %@: %i sur %i";
+"Empty message list" = "Liste de messages vide";
+"Scanning messages in %@" = "Examen des messages en %@";
+
+//Attachment Downloader
+"iPhone/iPod disk full" = "iPhone/iPod disque plein";
+"Opening Folder ..." = "Ouverture dossier";
+"Folder not found" = "Dossier non trouvé";
+"Fetching Attachment ..." = "Télécharge la pièce jointe";
+"Can't find attachment on server" = "Aucune pièce jointe trouvé sur le serveur";
+"Fetch error: %@" = "Erreur de téléchargement: %@";
+
+//AccountList
+"Edit Account" = "Compte email";
+
+//Account Type selector
+"Account Type" = "Type de compte";
+
+//FolderSelectView
+"Select folders to download." = "Sélectionnez les dossiers à télécharger";
+"Folders" = "Dossiers";
+
+//dates
+"yesterday" = "hier";
+
+// Email view:
+"Loading email" = "Chargement email";
+"Loading Mail %i ..." = "Chargement Emails %i ...";
+"[empty]" = "[vide]";
+
+"From:" = "De:";
+"To:" = "À:"; 
+"Cc:" = "Cc:";
+"Bcc:" = "Cci:";
+"Attachments:" = "Pièces jointes:";
+
+"Copy Mode" = "Mode copie";
+
+"Reply" = "Répondre";
+"Reply All" = "Répondre à tous";
+"Forward" = "Transférer";
+"Delete" = "Supprimer";
+"Cancel" = "Annuler";
+"Delete Message?" = "Supprimer message?";
+
+"Compose Email To" = "Composer email vers";
+"Copy Address" = "Copier l'adresse";
+"Copy Name" = "Copier le nom";
+
+//Attachment view
+//Attachment view
+"Attachment" = "Pièce jointe";
+
+//Email Processor (these strings end up in every single email's DB representation, so watch out!)
+" Folder: %@" = " Dossier: %@"; // here is what Outlook says . Where can I find email's DB representation for gmail ?
+" Attached: %@" = " En pièce jointe: %@";
+
+//Error Detail screen
+"Error Detail" = "Détail sur l'erreur";
+
+/////////////////
+// These are hardcoded in the xibs and here just for reference
+
+"Inbox"="Boîte de réception";
+"All Mail" = "Tous les mails";
+"Search History" = "Historique des recherches";
+"Autocompletions" = "Auto-complétion";
+"Autocompleting ..." = "Auto-complétion ...";
+"No autocompletions" = "Pas d'autocomplétions";
+
+"Enter query" = "Entrez une recherche";
+"Updated" = "Actualisé";
+"Logging into" = "Se connecter à";
+
+// settings screen
+"Messages" = "Messages";
+"Total messages in Gmail:" = "Messages dans Gmail:";
+"Messages on device:" = "Messages sur le portable:";
+"Estimated time remaining:" = "Estimation du temps restant:";
+"Storage" = "Mémoire";
+"Space used on device:" = "Espace utilisé sur portable";
+"Estimated space required:" = "Estimation de l'espace requis";
+"Space available:" = "Espace disponible";
+
+// new install warning
+"Please re-install reMail" = "Mettez à jour reMail s'il vous plait"; // please install the lastest version of reMail
+"reMail's data format has changed." = "Le format de reMail a changé";
+
+///////////
+// settings screen
+"Messages" = "Messages";
+"Total messages in Gmail:" = "Emails sur le serveur:";
+"Messages on device:" = "Emails sur le portable:";
+"Estimated time remaining:" = "Estimation du temps restant:";
+"Storage" = "Mémoire";
+"Space used for emails:" = "Espace utilisé pour emails:";
+"Space used for attachments:" = "Espace avec pièces jointes:";
+"Estimated space required:" = "Estimation de l'espace requis:";
+"Space available:" = "Espace disponible";
+
+// Error messages during fetch
+"Email server unreachable" = "Serveur injoignable";
+"Email servers unreachable" = "Tous serveurs injoignable"; 
+"Sync aborted" = "Synchro annulée";
+"Updating ... " = "Actualisé ...";
+"Error fetching" = "Erreur de téléchargement";
+"Fetch error in %i:" = "Erreur de téléchargement à %i:";
+"Connection to server lost" = "Connexion au serveur perdue";
+"%@, at %i. Try again." = "%@, à %i. Essayez encore.";
+
+// Settings
+"Offline" = "Hors ligne";
+"Don't connect" = "Ne pas se connecter";
+"Only use Wifi" = "Seulement Wifi";
+"Account" = "compte email";
+"Username" = "identifiant";
+"Password" = "mot de passe";
+"Connect Interval" = "Intervalle de connexion";
+"reMail Signature in Replies" = "Signature reMail dans les réponses";
+"Promote reMail" = "Recommander reMail";
+
+
+// Status screen support link
+"Error loading webpage." = "Erreur de chargement sur la page";
+"Loading ..." = "Chargement ...";
+"http://www.remail.com/app_love_remail?lang=en&edition=%i" = "http://www.remail.com/app_love_remail?lang=fr&edition=%i";
+"http://www.remail.com/app_support?lang=en&edition=%i" = "http://www.remail.com/app_support?lang=fr&edition=%i";
+"http://www.remail.com/app_incomplete_credentials?lang=en" = "http://www.remail.com/app_incomplete_credentials?lang=fr";
+
+/////////////////////////////////////////////////////////////////////////////////
+//TEXT FROM XIBs:
+/////////////////////////////////////////////////////////////////////////////////
+
+//AccountTypeSelect:
+"Select your account type:" = "Sélectionner votre type de compte:";
+"Gmail" = "Google Mail / Gmail";
+"IMAP" = "IMAP";
+
+
+//Gmail Config:
+"Please enter your Gmail credentials" = "Entrez vos informations de connexion Gmail:";
+"Gmail Username" = "Identifiant Gmail";
+"Gmail Password" = "Mot de passe Gmail";
+
+//HomeView
+"Search" = "Recherche";
+"All Mail" = "Tous les mails";
+
+//IMAP Config
+"Username" = "Identifiant";
+"Password" = "Mot de passe";
+"Encryption" = "Cryptage";
+"Port" = "Port";
+"Authentication" = "Authentification";
+"Check and Save" = "Sauvegarde";
+"reMail already has an account for this username/server combination" = "Ce compte existe déjà";
+
+
+//Intro
+"How it Works" = "Comment ça marche?";
+
+"reMail uses IMAP to download email onto your phone." = "reMail charge tous vos emails sur votre mobile en utilisant IMAP.";
+"All your email will be copied to your phone for quick searching." = "Tous vos emails sont copiés sur votre mobile pour accélérer la recherche.";
+"Large inbox? Connect to Wifi and leave reMail running overnight." = "Votre boîte est bien remplie? Connectez-vous en Wifi et laisser tourner reMail une nuit.";
+"If you exit reMail, the download will resume where it left off." = "Si vous quittez reMail, le chargement reprendra là où vous l'avez laissé.";
+
+//Search Entry View
+"Enter query" = "Entrez votre recherche";
+
+//Status
+"Messages" = "Emails";
+"Total messages on Server:" = "Emails sur serveur:";
+"Messages on device:" = "Emails sur mobile:";
+"Estimated time remaining:" = "Estimation du temps restant:";
+
+"Storage" = "Mémoire";
+"Space used for messages:" = "Espace pour emails:";
+"Space used for attachments:" = "Espace pour pièces jointes:";
+"Estimated space required:" = "Espace requis estimé:";
+"Space available:" = "Espace disponible:";
+
+"Support ..." = "Support ...";
+
+"Select Folders ..." = "Sélection des dossiers";
+
+// Flexi sync
+"Rackspace email address:" = "Identifiant Rackspace:";
+"Password:" = "Mot de passe:";
+"Check and Save" = "Sauvegarde";
+
+// Upsell
+"Multi-Account" = "Plusieurs comptes";
+"This feature lets you connect multiple Gmail accounts to reMail" = "Cette fonctionnalité vous permet de connecter à plusieurs comptes Gmail.";
+"How to Activate" = "Comment faire pour activer";
+"You can activate this functionality by recommending reMail to %i of your friends." = "Vous pouvez activer cette fonctionnalité en recommandant reMail à %i de vos amis.";
+"Recommend reMail" = "Recommandant reMail";
+
+// Usage
+"Recommend reMail to Your Friends!" = "Recommandez reMail";
+"Recommendations for %@:" = "Pour fonctionnalité %@:";
+"If you like reMail, please spread the word." = "Si vous aimez reMail, dites à vos amis!";
+
+
+"You've searched %i times. You're a %@." = "Vous avez cherché %i fois - vous êtes un %@";
+"You need to search %i times to be a %@" = "Vous avez besoin de chercher %i fois d'être un %@";
+
+"You should try reMail" = "Recommandation: reMail";
+"Hi!\n\nYou should try reMail.\n\nIt's an iPhone app that downloads all your email to your iPhone for fast full-text search.\n\nWebsite: http://www.remail.com/r" = "reMail est un application iPhone. Tous vos emails sont copiés sur votre mobile pour accélérer la recherche.\n\nSite web: http://www.remail.com/r";
+
+// Settings
+"Email Accounts" = "Comptes Email";
+"Settings" = "Réglages";
+"Add Account ..." = "Ajouter compte ...";
+"Clear Data" ="Effacer données";
+"Clear Search History" = "Effacer l'historique de recherche";
+"Clear Attachment Cache" ="Effacer cache pièces-jointes";
+"Support / Feedback" = "Soutien / Feedback";
+
+// About reMail
+"About reMail" = "À propos de reMail";
+
+//Push
+"Reminders are set up for:" = "Reminders are set up for:";
+
+//Push
+"Reminders are set up for:" = "Reminders are set up for:";
+"Set up Sync Reminders" = "Rappel de téléchargement";
+"Reminders" = "Rappels";
+"Remind every day at:" = "Rappeler tous les jours à:";
+"reMail can remind once a day you to download your newest emails." = "reMail peut rappeler une fois par jour pour télécharger votre e-mails.";
+"Disable" = "Désactiver";
+
+
+/////////////////////////////////////////////////////////////////////////////////
+//END TEXT FROM XIBs
+/////////////////////////////////////////////////////////////////////////////////
+
+// features
+"featureNameRM_NOADS" = "pas d'annonces";
+"featureNameRM_RACKSPACE" = "Rackspace";
+"featureNameRM_IMAP" = "IMAP";
+
+// In-App purchases
+"Buy reMail Features" = "Acheter fonctionnalité reMail";
+
+"In-App Purchases Disabled" = "In-App-Achats désactivé";
+"You need to enable in-app purchases in Home > Settings > General > Restrictions to buy features" = "Vous devez activer les achats en app Réglages > Général > Restrictions";
+
+"Features to Buy" = "Caractéristiques d'acheter";
+"Restore Purchases" = "Restaurer les achats";
+"Recover your purchases from prior installs." = "Récupérez vos achats auprès installe avant";
+"Loading Products ..." = "Chargement des produits ...";
+
+
+"Already Purchased" = "Déjà acheté";
+"This feature has already been purchased." = "Cette fonctionnalité a déjà été acheté.";
+
+"Product List Error" = "Erreur chargement produits";
+"Error loading product list from the iTunes server." = "Erreur lors du chargement du liste produits";
+
+"Restore Complete" = "Restauration terminée";
+"Your purchases have been restored!" = "Vos achats ont été restaurés";
+
+"Don't want to buy? Recommend reMail to %i people instead." = "Ne voulez pas acheter? Recommandez reMail à %i de vos amis.";
+"You have activated this feature through recommendations." = "Vous avez activé cette fonctionnalité avec des recommandations.";
+"Recommend" = "Recommandez";

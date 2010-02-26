@@ -1,0 +1,1650 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		14019B9D10DC26850000859B /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14019B9C10DC26850000859B /* libssl.a */; };
+		14019B9F10DC26940000859B /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14019B9E10DC26940000859B /* libcrypto.a */; };
+		14019BA110DC26A40000859B /* libsasl2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14019BA010DC26A40000859B /* libsasl2.a */; };
+		140382800F296B6900531DB7 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1403827F0F296B6900531DB7 /* HomeViewController.m */; };
+		140909C01014133A000D9121 /* notice.txt in Resources */ = {isa = PBXBuildFile; fileRef = 140909BF1014133A000D9121 /* notice.txt */; };
+		141887DA1132143D00A8ED15 /* Three20.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 141887D91132143D00A8ED15 /* Three20.bundle */; };
+		141887E9113214A400A8ED15 /* libThree20.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 141887C7113213B700A8ED15 /* libThree20.a */; };
+		141E29690FE7520F007D6EB4 /* PastQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 141E29680FE7520F007D6EB4 /* PastQuery.m */; };
+		142A6C280FF2C8D800BEF19F /* libiconv.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 142A6C270FF2C8D800BEF19F /* libiconv.2.dylib */; };
+		1451CEF80F6984EE007AF1C6 /* dist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1451CEF70F6984EE007AF1C6 /* dist.plist */; };
+		146CABFB105D51F6003D2E99 /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 146CABFA105D51F6003D2E99 /* ErrorView.xib */; };
+		146D1B210F4568BE005439E5 /* ActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 146D1B200F4568BE005439E5 /* ActivityIndicator.m */; };
+		147BBE790F38CA0200345343 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 147BBE780F38CA0200345343 /* Settings.bundle */; };
+		147BBF2C0F38DB1800345343 /* AppSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 147BBF2B0F38DB1800345343 /* AppSettings.m */; };
+		1481105A0F410F13000E3CBD /* ReMailAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 148110590F410F13000E3CBD /* ReMailAppDelegate.m */; };
+		148938560FF9A9AA00AFAD05 /* UidEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 148938550FF9A9AA00AFAD05 /* UidEntry.m */; };
+		14BF0A330FF017CE00A092C5 /* ContactName.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BF0A320FF017CE00A092C5 /* ContactName.m */; };
+		14C4C8BF0F2538AE00BFFF6B /* Email.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C4C8A40F2538AE00BFFF6B /* Email.m */; };
+		14C4C9520F253DB100BFFF6B /* MailboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C4C9410F253DB100BFFF6B /* MailboxViewController.m */; };
+		14C4C9530F253DB100BFFF6B /* MailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C4C9430F253DB100BFFF6B /* MailViewController.m */; };
+		14C4C9540F253DB100BFFF6B /* SearchEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C4C9450F253DB100BFFF6B /* SearchEntryViewController.m */; };
+		14C4C9550F253DB100BFFF6B /* SearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C4C9470F253DB100BFFF6B /* SearchResultsViewController.m */; };
+		14CEB02F1010987500025F41 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14CEB02E1010987500025F41 /* Localizable.strings */; };
+		14CEB03F1010994D00025F41 /* AccountTypeSelect.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14CEB03E1010994D00025F41 /* AccountTypeSelect.xib */; };
+		14CEB0441010997400025F41 /* GmailConfig.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14CEB0431010997400025F41 /* GmailConfig.xib */; };
+		14CEB0471010998400025F41 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14CEB0461010998400025F41 /* HomeView.xib */; };
+		14CEB04A1010999200025F41 /* ImapConfig.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14CEB0491010999200025F41 /* ImapConfig.xib */; };
+		14CEB04D101099A200025F41 /* Intro.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14CEB04C101099A200025F41 /* Intro.xib */; };
+		14CEB050101099AE00025F41 /* SearchEntryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14CEB04F101099AE00025F41 /* SearchEntryView.xib */; };
+		14CEB053101099BA00025F41 /* Status.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14CEB052101099BA00025F41 /* Status.xib */; };
+		14D74A1610AB7DD10019FB1F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D74A1510AB7DD10019FB1F /* StoreKit.framework */; };
+		14D96BF30FF4362C008F3BCC /* CTCoreMessage+ReMail.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D96BF20FF4362C008F3BCC /* CTCoreMessage+ReMail.m */; };
+		14D96E120FF5B0B4008F3BCC /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D96E110FF5B0B4008F3BCC /* IntroViewController.m */; };
+		14D96EED0FF6E990008F3BCC /* StatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D96EEC0FF6E990008F3BCC /* StatusViewController.m */; };
+		14DF9DAC105E525000A59D6D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14DF9DAB105E525000A59D6D /* CoreLocation.framework */; };
+		14E5E0A410852DE1007C241E /* About.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14E5E0A310852DE1007C241E /* About.xib */; };
+		14E5E17510853B58007C241E /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E5E17410853B58007C241E /* AddressBook.framework */; };
+		14E64AB30FEB26B6000A0962 /* LoadingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E64AB20FEB26B6000A0962 /* LoadingCell.m */; };
+		14E64AF80FEB29E3000A0962 /* MailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E64AF70FEB29E3000A0962 /* MailCell.m */; };
+		14E64FD60FEC5139000A0962 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E64FD50FEC5139000A0962 /* MessageUI.framework */; };
+		14E64FE10FEC51B4000A0962 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E64FE00FEC51B4000A0962 /* UIKit.framework */; };
+		14E95474104484C8006ABA93 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E95473104484C8006ABA93 /* WebViewController.m */; };
+		14F49D9A0FCA0B60003B9CAF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F49D990FCA0B60003B9CAF /* QuartzCore.framework */; };
+		14F83C89113723340096DE57 /* aboutGoogle.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C28113723340096DE57 /* aboutGoogle.png */; };
+		14F83C8A113723340096DE57 /* accountsConfigIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C29113723340096DE57 /* accountsConfigIcon.png */; };
+		14F83C8B113723340096DE57 /* accountTypeIconGmail.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C2A113723340096DE57 /* accountTypeIconGmail.png */; };
+		14F83C8C113723340096DE57 /* accountTypeIconImap.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C2B113723340096DE57 /* accountTypeIconImap.png */; };
+		14F83C8D113723340096DE57 /* accountTypeIconRackspace.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C2C113723340096DE57 /* accountTypeIconRackspace.png */; };
+		14F83C8E113723340096DE57 /* attachment.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C2D113723340096DE57 /* attachment.png */; };
+		14F83C8F113723340096DE57 /* checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C2E113723340096DE57 /* checkbox.png */; };
+		14F83C90113723340096DE57 /* checkboxChecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C2F113723340096DE57 /* checkboxChecked.png */; };
+		14F83C91113723340096DE57 /* collapseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C30113723340096DE57 /* collapseButton.png */; };
+		14F83C92113723340096DE57 /* convoMe.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C31113723340096DE57 /* convoMe.png */; };
+		14F83C93113723340096DE57 /* convoPerson1.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C32113723340096DE57 /* convoPerson1.png */; };
+		14F83C94113723340096DE57 /* convoPerson2.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C33113723340096DE57 /* convoPerson2.png */; };
+		14F83C95113723340096DE57 /* convoPerson3.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C34113723340096DE57 /* convoPerson3.png */; };
+		14F83C96113723340096DE57 /* convoPerson4.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C35113723340096DE57 /* convoPerson4.png */; };
+		14F83C97113723340096DE57 /* convoPerson5.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C36113723340096DE57 /* convoPerson5.png */; };
+		14F83C98113723340096DE57 /* convoPerson6.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C37113723340096DE57 /* convoPerson6.png */; };
+		14F83C99113723340096DE57 /* convoPerson7.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C38113723340096DE57 /* convoPerson7.png */; };
+		14F83C9A113723340096DE57 /* convoPerson8.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C39113723340096DE57 /* convoPerson8.png */; };
+		14F83C9B113723340096DE57 /* convoPerson9.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C3A113723340096DE57 /* convoPerson9.png */; };
+		14F83C9C113723340096DE57 /* copyModeOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C3B113723340096DE57 /* copyModeOff.png */; };
+		14F83C9D113723340096DE57 /* copyModeOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C3C113723340096DE57 /* copyModeOn.png */; };
+		14F83C9E113723340096DE57 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C3D113723340096DE57 /* Default.png */; };
+		14F83C9F113723340096DE57 /* errorBtnBgError.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C3E113723340096DE57 /* errorBtnBgError.png */; };
+		14F83CA0113723340096DE57 /* errorDetailLink.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C3F113723340096DE57 /* errorDetailLink.png */; };
+		14F83CA1113723340096DE57 /* featureIconRM_IMAP.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C40113723340096DE57 /* featureIconRM_IMAP.png */; };
+		14F83CA2113723340096DE57 /* featureIconRM_NOADS.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C41113723340096DE57 /* featureIconRM_NOADS.png */; };
+		14F83CA3113723340096DE57 /* featureIconRM_RACKSPACE.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C42113723340096DE57 /* featureIconRM_RACKSPACE.png */; };
+		14F83CA4113723340096DE57 /* featureRM_IMAP.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C43113723340096DE57 /* featureRM_IMAP.png */; };
+		14F83CA5113723340096DE57 /* featureRM_NOADS.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C44113723340096DE57 /* featureRM_NOADS.png */; };
+		14F83CA6113723340096DE57 /* featureRM_RACKSPACE.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C45113723340096DE57 /* featureRM_RACKSPACE.png */; };
+		14F83CA7113723340096DE57 /* folderIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C46113723340096DE57 /* folderIcon.png */; };
+		14F83CA8113723340096DE57 /* foldersAll.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C47113723340096DE57 /* foldersAll.png */; };
+		14F83CA9113723340096DE57 /* forwardedArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C48113723340096DE57 /* forwardedArrow.png */; };
+		14F83CAA113723340096DE57 /* homeBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C49113723340096DE57 /* homeBg.png */; };
+		14F83CAB113723340096DE57 /* homeBgA.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C4A113723340096DE57 /* homeBgA.png */; };
+		14F83CAC113723340096DE57 /* homeBgNoLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C4B113723340096DE57 /* homeBgNoLogo.png */; };
+		14F83CAD113723340096DE57 /* homeBtnFolders.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C4C113723340096DE57 /* homeBtnFolders.png */; };
+		14F83CAE113723340096DE57 /* homeBtnInbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C4D113723340096DE57 /* homeBtnInbox.png */; };
+		14F83CAF113723340096DE57 /* homeBtnSearch.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C4E113723340096DE57 /* homeBtnSearch.png */; };
+		14F83CB0113723340096DE57 /* homeBtnSettings.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C4F113723340096DE57 /* homeBtnSettings.png */; };
+		14F83CB1113723340096DE57 /* homeBtnSettingsBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C50113723340096DE57 /* homeBtnSettingsBack.png */; };
+		14F83CB2113723340096DE57 /* homeDFoldersA.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C51113723340096DE57 /* homeDFoldersA.png */; };
+		14F83CB3113723340096DE57 /* homeDFoldersH.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C52113723340096DE57 /* homeDFoldersH.png */; };
+		14F83CB4113723340096DE57 /* homeDSearchA.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C53113723340096DE57 /* homeDSearchA.png */; };
+		14F83CB5113723340096DE57 /* homeDSearchH.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C54113723340096DE57 /* homeDSearchH.png */; };
+		14F83CB6113723340096DE57 /* homeDSettingsA.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C55113723340096DE57 /* homeDSettingsA.png */; };
+		14F83CB7113723340096DE57 /* homeDSettingsH.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C56113723340096DE57 /* homeDSettingsH.png */; };
+		14F83CB8113723340096DE57 /* homeDUsageA.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C57113723340096DE57 /* homeDUsageA.png */; };
+		14F83CB9113723340096DE57 /* homeDUsageH.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C58113723340096DE57 /* homeDUsageH.png */; };
+		14F83CBA113723340096DE57 /* homeFFoldersA.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C59113723340096DE57 /* homeFFoldersA.png */; };
+		14F83CBB113723340096DE57 /* homeFFoldersH.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C5A113723340096DE57 /* homeFFoldersH.png */; };
+		14F83CBC113723340096DE57 /* homeFoldersA.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C5B113723340096DE57 /* homeFoldersA.png */; };
+		14F83CBD113723340096DE57 /* homeFoldersH.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C5C113723340096DE57 /* homeFoldersH.png */; };
+		14F83CBE113723340096DE57 /* homeFSearchA.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C5D113723340096DE57 /* homeFSearchA.png */; };
+		14F83CBF113723340096DE57 /* homeFSearchH.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C5E113723340096DE57 /* homeFSearchH.png */; };
+		14F83CC0113723340096DE57 /* homeFSettingsA.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C5F113723340096DE57 /* homeFSettingsA.png */; };
+		14F83CC1113723340096DE57 /* homeFSettingsH.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C60113723340096DE57 /* homeFSettingsH.png */; };
+		14F83CC2113723340096DE57 /* homeSearchA.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C61113723340096DE57 /* homeSearchA.png */; };
+		14F83CC3113723340096DE57 /* homeSearchH.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C62113723340096DE57 /* homeSearchH.png */; };
+		14F83CC4113723340096DE57 /* homeSettingsA.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C63113723340096DE57 /* homeSettingsA.png */; };
+		14F83CC5113723340096DE57 /* homeSettingsH.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C64113723340096DE57 /* homeSettingsH.png */; };
+		14F83CC6113723340096DE57 /* homeUsageA.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C65113723340096DE57 /* homeUsageA.png */; };
+		14F83CC7113723340096DE57 /* homeUsageH.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C66113723340096DE57 /* homeUsageH.png */; };
+		14F83CC8113723340096DE57 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C67113723340096DE57 /* icon.png */; };
+		14F83CC9113723340096DE57 /* iconPurchased.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C68113723340096DE57 /* iconPurchased.png */; };
+		14F83CCA113723340096DE57 /* introDownload.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C69113723340096DE57 /* introDownload.png */; };
+		14F83CCB113723340096DE57 /* introImap.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C6A113723340096DE57 /* introImap.png */; };
+		14F83CCC113723340096DE57 /* introResume.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C6B113723340096DE57 /* introResume.png */; };
+		14F83CCD113723340096DE57 /* introWifi.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C6C113723340096DE57 /* introWifi.png */; };
+		14F83CCE113723340096DE57 /* moreResults.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C6D113723340096DE57 /* moreResults.png */; };
+		14F83CCF113723340096DE57 /* plainBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C6E113723340096DE57 /* plainBg.png */; };
+		14F83CD0113723340096DE57 /* pushIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C6F113723340096DE57 /* pushIcon.png */; };
+		14F83CD1113723340096DE57 /* ranksNoTHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C70113723340096DE57 /* ranksNoTHighlight.png */; };
+		14F83CD2113723340096DE57 /* ranksNoTrophy.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C71113723340096DE57 /* ranksNoTrophy.png */; };
+		14F83CD3113723340096DE57 /* ranksTrophy.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C72113723340096DE57 /* ranksTrophy.png */; };
+		14F83CD4113723340096DE57 /* reMailAppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C73113723340096DE57 /* reMailAppIcon.png */; };
+		14F83CD5113723340096DE57 /* reMailAppIconElite.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C74113723340096DE57 /* reMailAppIconElite.png */; };
+		14F83CD6113723340096DE57 /* reMailAppIconGmail.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C75113723340096DE57 /* reMailAppIconGmail.png */; };
+		14F83CD7113723340096DE57 /* reMailAppIconGold.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C76113723340096DE57 /* reMailAppIconGold.png */; };
+		14F83CD8113723340096DE57 /* remailTextTrans.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C77113723340096DE57 /* remailTextTrans.png */; };
+		14F83CD9113723340096DE57 /* repliedArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C78113723340096DE57 /* repliedArrow.png */; };
+		14F83CDA113723340096DE57 /* settingsAboutRemail.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C79113723340096DE57 /* settingsAboutRemail.png */; };
+		14F83CDB113723340096DE57 /* settingsAccountGmailIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C7A113723340096DE57 /* settingsAccountGmailIcon.png */; };
+		14F83CDC113723340096DE57 /* settingsAccountImapIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C7B113723340096DE57 /* settingsAccountImapIcon.png */; };
+		14F83CDD113723340096DE57 /* settingsAccountRackspaceIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C7C113723340096DE57 /* settingsAccountRackspaceIcon.png */; };
+		14F83CDE113723340096DE57 /* settingsAddAccountIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C7D113723340096DE57 /* settingsAddAccountIcon.png */; };
+		14F83CDF113723340096DE57 /* settingsLoveRemail.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C7E113723340096DE57 /* settingsLoveRemail.png */; };
+		14F83CE0113723340096DE57 /* settingsPinCodeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C7F113723340096DE57 /* settingsPinCodeIcon.png */; };
+		14F83CE1113723340096DE57 /* settingsSupport.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C80113723340096DE57 /* settingsSupport.png */; };
+		14F83CE2113723340096DE57 /* statusBgNoLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C81113723340096DE57 /* statusBgNoLogo.png */; };
+		14F83CE3113723340096DE57 /* statusButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C82113723340096DE57 /* statusButton.png */; };
+		14F83CE4113723340096DE57 /* t.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C83113723340096DE57 /* t.png */; };
+		14F83CE5113723340096DE57 /* textSearch.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C84113723340096DE57 /* textSearch.png */; };
+		14F83CE6113723340096DE57 /* toIndicator.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C85113723340096DE57 /* toIndicator.png */; };
+		14F83CE7113723340096DE57 /* toolbarSettings.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C86113723340096DE57 /* toolbarSettings.png */; };
+		14F83CE8113723340096DE57 /* unreadIndicator.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C87113723340096DE57 /* unreadIndicator.png */; };
+		14F83CE9113723340096DE57 /* usageIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F83C88113723340096DE57 /* usageIcon.png */; };
+		14F83D02113725450096DE57 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = 14F83D00113725450096DE57 /* sqlite3.c */; };
+		14F83D1B113725E50096DE57 /* Attachment.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F83D04113725E50096DE57 /* Attachment.xib */; };
+		14F83D1C113725E50096DE57 /* AutocompleteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F83D05113725E50096DE57 /* AutocompleteCell.xib */; };
+		14F83D1E113725E50096DE57 /* FlexiConfig.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F83D07113725E50096DE57 /* FlexiConfig.xib */; };
+		14F83D1F113725E50096DE57 /* FolderList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F83D08113725E50096DE57 /* FolderList.xib */; };
+		14F83D20113725E50096DE57 /* FolderSelect.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F83D09113725E50096DE57 /* FolderSelect.xib */; };
+		14F83D21113725E50096DE57 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F83D0A113725E50096DE57 /* LoadingCell.xib */; };
+		14F83D22113725E50096DE57 /* LoveRemail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F83D0B113725E50096DE57 /* LoveRemail.xib */; };
+		14F83D23113725E50096DE57 /* MailboxView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F83D0C113725E50096DE57 /* MailboxView.xib */; };
+		14F83D24113725E50096DE57 /* MailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F83D0D113725E50096DE57 /* MailCell.xib */; };
+		14F83D25113725E50096DE57 /* MailItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F83D0E113725E50096DE57 /* MailItemCell.xib */; };
+		14F83D26113725E50096DE57 /* Person.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F83D0F113725E50096DE57 /* Person.xib */; };
+		14F83D27113725E50096DE57 /* ProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F83D10113725E50096DE57 /* ProgressView.xib */; };
+		14F83D28113725E50096DE57 /* PushSetup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F83D11113725E50096DE57 /* PushSetup.xib */; };
+		14F83D29113725E50096DE57 /* RootWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F83D12113725E50096DE57 /* RootWindow.xib */; };
+		14F83D2A113725E50096DE57 /* SearchResults.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F83D13113725E50096DE57 /* SearchResults.xib */; };
+		14F83D2B113725E50096DE57 /* SettingsList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F83D14113725E50096DE57 /* SettingsList.xib */; };
+		14F83D2C113725E50096DE57 /* Store.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F83D15113725E50096DE57 /* Store.xib */; };
+		14F83D2D113725E50096DE57 /* StoreItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F83D16113725E50096DE57 /* StoreItem.xib */; };
+		14F83D2E113725E50096DE57 /* StoreItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F83D17113725E50096DE57 /* StoreItemCell.xib */; };
+		14F83D2F113725E50096DE57 /* Upsell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F83D18113725E50096DE57 /* Upsell.xib */; };
+		14F83D30113725E50096DE57 /* Usage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F83D19113725E50096DE57 /* Usage.xib */; };
+		14F83D31113725E50096DE57 /* WebView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F83D1A113725E50096DE57 /* WebView.xib */; };
+		14F83D46113726E60096DE57 /* BuchheitTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F83D40113726E60096DE57 /* BuchheitTimer.m */; };
+		14F83D47113726E60096DE57 /* DateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F83D42113726E60096DE57 /* DateUtil.m */; };
+		14F83D48113726E60096DE57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F83D43113726E60096DE57 /* main.m */; };
+		14F83D49113726E60096DE57 /* StringUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F83D45113726E60096DE57 /* StringUtil.m */; };
+		14F842BB113727AF0096DE57 /* AddEmailDBAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F84059113727AF0096DE57 /* AddEmailDBAccessor.m */; };
+		14F842BC113727AF0096DE57 /* ContactDBAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F8405B113727AF0096DE57 /* ContactDBAccessor.m */; };
+		14F842BD113727AF0096DE57 /* GlobalDBFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F8405D113727AF0096DE57 /* GlobalDBFunctions.m */; };
+		14F842BE113727AF0096DE57 /* LoadEmailDBAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F8405F113727AF0096DE57 /* LoadEmailDBAccessor.m */; };
+		14F842BF113727AF0096DE57 /* SearchEmailDBAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F84061113727AF0096DE57 /* SearchEmailDBAccessor.m */; };
+		14F842C0113727AF0096DE57 /* UidDBAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F84063113727AF0096DE57 /* UidDBAccessor.m */; };
+		14F842E1113728830096DE57 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F842C2113728830096DE57 /* AboutViewController.m */; };
+		14F842E2113728830096DE57 /* AccountTypeSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F842C4113728830096DE57 /* AccountTypeSelectViewController.m */; };
+		14F842E3113728830096DE57 /* AttachmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F842C6113728830096DE57 /* AttachmentViewController.m */; };
+		14F842E4113728830096DE57 /* AutocompleteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F842C8113728830096DE57 /* AutocompleteCell.m */; };
+		14F842E5113728830096DE57 /* ErrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F842CA113728830096DE57 /* ErrorViewController.m */; };
+		14F842E6113728830096DE57 /* FlexiConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F842CC113728830096DE57 /* FlexiConfigViewController.m */; };
+		14F842E7113728830096DE57 /* FolderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F842CE113728830096DE57 /* FolderListViewController.m */; };
+		14F842E8113728830096DE57 /* FolderSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F842D0113728830096DE57 /* FolderSelectViewController.m */; };
+		14F842E9113728830096DE57 /* GmailConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F842D2113728830096DE57 /* GmailConfigViewController.m */; };
+		14F842EA113728830096DE57 /* ImapConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F842D4113728830096DE57 /* ImapConfigViewController.m */; };
+		14F842EB113728830096DE57 /* MailItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F842D6113728830096DE57 /* MailItemCell.m */; };
+		14F842EC113728830096DE57 /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F842D8113728830096DE57 /* ProgressView.m */; };
+		14F842ED113728830096DE57 /* PushSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F842DA113728830096DE57 /* PushSetupViewController.m */; };
+		14F842EE113728830096DE57 /* SettingsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F842DC113728830096DE57 /* SettingsListViewController.m */; };
+		14F842EF113728830096DE57 /* UpsellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F842DE113728830096DE57 /* UpsellViewController.m */; };
+		14F842F0113728830096DE57 /* UsageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F842E0113728830096DE57 /* UsageViewController.m */; };
+		14F842F911372B6E0096DE57 /* StoreItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F842F211372B6E0096DE57 /* StoreItemCell.m */; };
+		14F842FA11372B6E0096DE57 /* StoreItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F842F411372B6E0096DE57 /* StoreItemViewController.m */; };
+		14F842FB11372B6E0096DE57 /* StoreObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F842F611372B6E0096DE57 /* StoreObserver.m */; };
+		14F842FC11372B6E0096DE57 /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F842F811372B6E0096DE57 /* StoreViewController.m */; };
+		14F842FF11372BB40096DE57 /* SearchRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F842FE11372BB40096DE57 /* SearchRunner.m */; };
+		14F8430A11372C340096DE57 /* AttachmentDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F8430111372C340096DE57 /* AttachmentDownloader.m */; };
+		14F8430B11372C340096DE57 /* EmailProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F8430311372C340096DE57 /* EmailProcessor.m */; };
+		14F8430C11372C340096DE57 /* ImapFolderWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F8430511372C340096DE57 /* ImapFolderWorker.m */; };
+		14F8430D11372C340096DE57 /* ImapSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F8430711372C340096DE57 /* ImapSync.m */; };
+		14F8430E11372C340096DE57 /* SyncManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F8430911372C340096DE57 /* SyncManager.m */; };
+		14F8431B11372CE00096DE57 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F8431611372CE00096DE57 /* NSObject+SBJSON.m */; };
+		14F8431C11372CE00096DE57 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F8431811372CE00096DE57 /* NSString+SBJSON.m */; };
+		14F8431D11372CE00096DE57 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F8431A11372CE00096DE57 /* SBJSON.m */; };
+		14F8432411372EF30096DE57 /* aboutGabor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 14F8432311372EF30096DE57 /* aboutGabor.jpg */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		20DB96D40F5CBA1C0015FE73 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DB96D30F5CBA1C0015FE73 /* Reachability.m */; };
+		20DB96EE0F5CBB0C0015FE73 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20DB96ED0F5CBB0C0015FE73 /* SystemConfiguration.framework */; };
+		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
+		F8618DDD10DAE4C600C41188 /* libmailcore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8618DDA10DAE4A100C41188 /* libmailcore.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		141887C6113213B700A8ED15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 141887C1113213B700A8ED15 /* Three20.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BEF31F3A0F352DF5000DE5D2;
+			remoteInfo = Three20;
+		};
+		141887C8113213B700A8ED15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 141887C1113213B700A8ED15 /* Three20.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EB9E6C6210B6A8F800DE563C;
+			remoteInfo = UnitTests;
+		};
+		141887D61132141600A8ED15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 141887C1113213B700A8ED15 /* Three20.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BEF31F390F352DF5000DE5D2;
+			remoteInfo = Three20;
+		};
+		F8618DD510DAE4A100C41188 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8618DC810DAE4A100C41188 /* MailCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = MailCore;
+		};
+		F8618DD710DAE4A100C41188 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8618DC810DAE4A100C41188 /* MailCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F82D7C810F48AC8500ADA65C;
+			remoteInfo = Tests;
+		};
+		F8618DD910DAE4A100C41188 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8618DC810DAE4A100C41188 /* MailCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8618B5710DADB5C00C41188;
+			remoteInfo = "MailCore iPhone";
+		};
+		F8618DDB10DAE4B800C41188 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8618DC810DAE4A100C41188 /* MailCore.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8618B5610DADB5C00C41188;
+			remoteInfo = "MailCore iPhone";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1433CCCE0F79883B001BEFC5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "welcome/*";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1433CCDB0F7988BE001BEFC5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1433CCDC0F7988BE001BEFC5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = welcome/Parts;
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		14019B9C10DC26850000859B /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = ../mailcore/libetpan/binaries/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/Release/lib/libssl.a; sourceTree = SOURCE_ROOT; };
+		14019B9E10DC26940000859B /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = ../mailcore/libetpan/binaries/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/Release/lib/libcrypto.a; sourceTree = SOURCE_ROOT; };
+		14019BA010DC26A40000859B /* libsasl2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsasl2.a; path = ../mailcore/libetpan/binaries/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/Release/lib/libsasl2.a; sourceTree = SOURCE_ROOT; };
+		1403827F0F296B6900531DB7 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = Classes/HomeViewController.m; sourceTree = "<group>"; };
+		140382810F296B8D00531DB7 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = Classes/HomeViewController.h; sourceTree = "<group>"; };
+		14073E4E106DAB97007E1DE5 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/GmailConfig.xib; sourceTree = "<group>"; };
+		14073E4F106DABA4007E1DE5 /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = French.lproj/GmailConfig.xib; sourceTree = "<group>"; };
+		140909BF1014133A000D9121 /* notice.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = notice.txt; sourceTree = "<group>"; };
+		141887C1113213B700A8ED15 /* Three20.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20.xcodeproj; path = ../three20/src/Three20.xcodeproj; sourceTree = SOURCE_ROOT; };
+		141887D91132143D00A8ED15 /* Three20.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Three20.bundle; path = ../three20/src/Three20.bundle; sourceTree = SOURCE_ROOT; };
+		141E29670FE7520F007D6EB4 /* PastQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PastQuery.h; sourceTree = "<group>"; };
+		141E29680FE7520F007D6EB4 /* PastQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PastQuery.m; sourceTree = "<group>"; };
+		142A6C270FF2C8D800BEF19F /* libiconv.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.2.dylib; path = usr/lib/libiconv.2.dylib; sourceTree = SDKROOT; };
+		1451CEF70F6984EE007AF1C6 /* dist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dist.plist; sourceTree = "<group>"; };
+		1468BBF3104E06770022BE89 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ErrorView.xib; sourceTree = "<group>"; };
+		146B46951082D83A0047A0BF /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/About.xib; sourceTree = "<group>"; };
+		146B47E210831E410047A0BF /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/HomeView.xib; sourceTree = "<group>"; };
+		146CAC00105D523E003D2E99 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/ErrorView.xib; sourceTree = "<group>"; };
+		146CAC77105D60FC003D2E99 /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/Localizable.strings; sourceTree = "<group>"; };
+		146CAC92105D64DF003D2E99 /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = French.lproj/ErrorView.xib; sourceTree = "<group>"; };
+		146CACAA105D6774003D2E99 /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = French.lproj/ImapConfig.xib; sourceTree = "<group>"; };
+		146CACBA105D695B003D2E99 /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = French.lproj/Intro.xib; sourceTree = "<group>"; };
+		146CACBE105D6A02003D2E99 /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = French.lproj/SearchEntryView.xib; sourceTree = "<group>"; };
+		146CACC2105D6A30003D2E99 /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = French.lproj/Status.xib; sourceTree = "<group>"; };
+		146D1B1F0F4568BE005439E5 /* ActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivityIndicator.h; path = Classes/ActivityIndicator.h; sourceTree = "<group>"; };
+		146D1B200F4568BE005439E5 /* ActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivityIndicator.m; path = Classes/ActivityIndicator.m; sourceTree = "<group>"; };
+		147BBE780F38CA0200345343 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		147BBF2A0F38DB1800345343 /* AppSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppSettings.h; path = Classes/AppSettings.h; sourceTree = "<group>"; };
+		147BBF2B0F38DB1800345343 /* AppSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppSettings.m; path = Classes/AppSettings.m; sourceTree = "<group>"; };
+		148110580F410F13000E3CBD /* ReMailAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReMailAppDelegate.h; path = Classes/ReMailAppDelegate.h; sourceTree = "<group>"; };
+		148110590F410F13000E3CBD /* ReMailAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReMailAppDelegate.m; path = Classes/ReMailAppDelegate.m; sourceTree = "<group>"; };
+		148938540FF9A9AA00AFAD05 /* UidEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UidEntry.h; sourceTree = "<group>"; };
+		148938550FF9A9AA00AFAD05 /* UidEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UidEntry.m; sourceTree = "<group>"; };
+		14BF0A310FF017CE00A092C5 /* ContactName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactName.h; sourceTree = "<group>"; };
+		14BF0A320FF017CE00A092C5 /* ContactName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactName.m; sourceTree = "<group>"; };
+		14C4C8A30F2538AE00BFFF6B /* Email.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Email.h; sourceTree = "<group>"; };
+		14C4C8A40F2538AE00BFFF6B /* Email.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Email.m; sourceTree = "<group>"; };
+		14C4C9400F253DB100BFFF6B /* MailboxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MailboxViewController.h; path = Classes/MailboxViewController.h; sourceTree = "<group>"; };
+		14C4C9410F253DB100BFFF6B /* MailboxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MailboxViewController.m; path = Classes/MailboxViewController.m; sourceTree = "<group>"; };
+		14C4C9420F253DB100BFFF6B /* MailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MailViewController.h; path = Classes/MailViewController.h; sourceTree = "<group>"; };
+		14C4C9430F253DB100BFFF6B /* MailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MailViewController.m; path = Classes/MailViewController.m; sourceTree = "<group>"; };
+		14C4C9440F253DB100BFFF6B /* SearchEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchEntryViewController.h; path = Classes/SearchEntryViewController.h; sourceTree = "<group>"; };
+		14C4C9450F253DB100BFFF6B /* SearchEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchEntryViewController.m; path = Classes/SearchEntryViewController.m; sourceTree = "<group>"; };
+		14C4C9460F253DB100BFFF6B /* SearchResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchResultsViewController.h; path = Classes/SearchResultsViewController.h; sourceTree = "<group>"; };
+		14C4C9470F253DB100BFFF6B /* SearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchResultsViewController.m; path = Classes/SearchResultsViewController.m; sourceTree = "<group>"; };
+		14CEB02C1010986A00025F41 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		14CEB0301010994700025F41 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/AccountTypeSelect.xib; sourceTree = "<group>"; };
+		14CEB0311010994700025F41 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/GmailConfig.xib; sourceTree = "<group>"; };
+		14CEB0321010994700025F41 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/HomeView.xib; sourceTree = "<group>"; };
+		14CEB0331010994700025F41 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ImapConfig.xib; sourceTree = "<group>"; };
+		14CEB0341010994700025F41 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Intro.xib; sourceTree = "<group>"; };
+		14CEB0351010994700025F41 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/SearchEntryView.xib; sourceTree = "<group>"; };
+		14CEB0361010994700025F41 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Status.xib; sourceTree = "<group>"; };
+		14CEB04B1010999A00025F41 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/ImapConfig.xib; sourceTree = "<group>"; };
+		14CEB04E101099A800025F41 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/Intro.xib; sourceTree = "<group>"; };
+		14CEB051101099B300025F41 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/SearchEntryView.xib; sourceTree = "<group>"; };
+		14CEB054101099C300025F41 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/Status.xib; sourceTree = "<group>"; };
+		14CEB056101099D700025F41 /* German */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/Localizable.strings; sourceTree = "<group>"; };
+		14D09BC710B22EFE0003F006 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/AccountTypeSelect.xib; sourceTree = "<group>"; };
+		14D09BC810B22F020003F006 /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = French.lproj/AccountTypeSelect.xib; sourceTree = "<group>"; };
+		14D74A1510AB7DD10019FB1F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		14D96BF20FF4362C008F3BCC /* CTCoreMessage+ReMail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CTCoreMessage+ReMail.m"; sourceTree = "<group>"; };
+		14D96BF40FF43639008F3BCC /* CTCoreMessage+ReMail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CTCoreMessage+ReMail.h"; sourceTree = "<group>"; };
+		14D96E100FF5B0B4008F3BCC /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IntroViewController.h; path = Classes/IntroViewController.h; sourceTree = "<group>"; };
+		14D96E110FF5B0B4008F3BCC /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IntroViewController.m; path = Classes/IntroViewController.m; sourceTree = "<group>"; };
+		14D96EEB0FF6E990008F3BCC /* StatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatusViewController.h; path = Classes/StatusViewController.h; sourceTree = "<group>"; };
+		14D96EEC0FF6E990008F3BCC /* StatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatusViewController.m; path = Classes/StatusViewController.m; sourceTree = "<group>"; };
+		14DF9DAB105E525000A59D6D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		14E5DF6110851B43007C241E /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = French.lproj/HomeView.xib; sourceTree = "<group>"; };
+		14E5E17410853B58007C241E /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = /System/Library/Frameworks/AddressBook.framework; sourceTree = "<absolute>"; };
+		14E64AB10FEB26B6000A0962 /* LoadingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadingCell.h; path = Classes/LoadingCell.h; sourceTree = "<group>"; };
+		14E64AB20FEB26B6000A0962 /* LoadingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoadingCell.m; path = Classes/LoadingCell.m; sourceTree = "<group>"; };
+		14E64AF60FEB29E3000A0962 /* MailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MailCell.h; path = Classes/MailCell.h; sourceTree = "<group>"; };
+		14E64AF70FEB29E3000A0962 /* MailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MailCell.m; path = Classes/MailCell.m; sourceTree = "<group>"; };
+		14E64FD50FEC5139000A0962 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		14E64FE00FEC51B4000A0962 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		14E95472104484C8006ABA93 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebViewController.h; path = Classes/WebViewController.h; sourceTree = "<group>"; };
+		14E95473104484C8006ABA93 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewController.m; path = Classes/WebViewController.m; sourceTree = "<group>"; };
+		14F49D990FCA0B60003B9CAF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = ../../../../../System/Library/Frameworks/QuartzCore.framework; sourceTree = SOURCE_ROOT; };
+		14F83C28113723340096DE57 /* aboutGoogle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = aboutGoogle.png; path = Resources/Artwork/aboutGoogle.png; sourceTree = "<group>"; };
+		14F83C29113723340096DE57 /* accountsConfigIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = accountsConfigIcon.png; path = Resources/Artwork/accountsConfigIcon.png; sourceTree = "<group>"; };
+		14F83C2A113723340096DE57 /* accountTypeIconGmail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = accountTypeIconGmail.png; path = Resources/Artwork/accountTypeIconGmail.png; sourceTree = "<group>"; };
+		14F83C2B113723340096DE57 /* accountTypeIconImap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = accountTypeIconImap.png; path = Resources/Artwork/accountTypeIconImap.png; sourceTree = "<group>"; };
+		14F83C2C113723340096DE57 /* accountTypeIconRackspace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = accountTypeIconRackspace.png; path = Resources/Artwork/accountTypeIconRackspace.png; sourceTree = "<group>"; };
+		14F83C2D113723340096DE57 /* attachment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = attachment.png; path = Resources/Artwork/attachment.png; sourceTree = "<group>"; };
+		14F83C2E113723340096DE57 /* checkbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checkbox.png; path = Resources/Artwork/checkbox.png; sourceTree = "<group>"; };
+		14F83C2F113723340096DE57 /* checkboxChecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checkboxChecked.png; path = Resources/Artwork/checkboxChecked.png; sourceTree = "<group>"; };
+		14F83C30113723340096DE57 /* collapseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = collapseButton.png; path = Resources/Artwork/collapseButton.png; sourceTree = "<group>"; };
+		14F83C31113723340096DE57 /* convoMe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = convoMe.png; path = Resources/Artwork/convoMe.png; sourceTree = "<group>"; };
+		14F83C32113723340096DE57 /* convoPerson1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = convoPerson1.png; path = Resources/Artwork/convoPerson1.png; sourceTree = "<group>"; };
+		14F83C33113723340096DE57 /* convoPerson2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = convoPerson2.png; path = Resources/Artwork/convoPerson2.png; sourceTree = "<group>"; };
+		14F83C34113723340096DE57 /* convoPerson3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = convoPerson3.png; path = Resources/Artwork/convoPerson3.png; sourceTree = "<group>"; };
+		14F83C35113723340096DE57 /* convoPerson4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = convoPerson4.png; path = Resources/Artwork/convoPerson4.png; sourceTree = "<group>"; };
+		14F83C36113723340096DE57 /* convoPerson5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = convoPerson5.png; path = Resources/Artwork/convoPerson5.png; sourceTree = "<group>"; };
+		14F83C37113723340096DE57 /* convoPerson6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = convoPerson6.png; path = Resources/Artwork/convoPerson6.png; sourceTree = "<group>"; };
+		14F83C38113723340096DE57 /* convoPerson7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = convoPerson7.png; path = Resources/Artwork/convoPerson7.png; sourceTree = "<group>"; };
+		14F83C39113723340096DE57 /* convoPerson8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = convoPerson8.png; path = Resources/Artwork/convoPerson8.png; sourceTree = "<group>"; };
+		14F83C3A113723340096DE57 /* convoPerson9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = convoPerson9.png; path = Resources/Artwork/convoPerson9.png; sourceTree = "<group>"; };
+		14F83C3B113723340096DE57 /* copyModeOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = copyModeOff.png; path = Resources/Artwork/copyModeOff.png; sourceTree = "<group>"; };
+		14F83C3C113723340096DE57 /* copyModeOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = copyModeOn.png; path = Resources/Artwork/copyModeOn.png; sourceTree = "<group>"; };
+		14F83C3D113723340096DE57 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Artwork/Default.png; sourceTree = "<group>"; };
+		14F83C3E113723340096DE57 /* errorBtnBgError.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = errorBtnBgError.png; path = Resources/Artwork/errorBtnBgError.png; sourceTree = "<group>"; };
+		14F83C3F113723340096DE57 /* errorDetailLink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = errorDetailLink.png; path = Resources/Artwork/errorDetailLink.png; sourceTree = "<group>"; };
+		14F83C40113723340096DE57 /* featureIconRM_IMAP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = featureIconRM_IMAP.png; path = Resources/Artwork/featureIconRM_IMAP.png; sourceTree = "<group>"; };
+		14F83C41113723340096DE57 /* featureIconRM_NOADS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = featureIconRM_NOADS.png; path = Resources/Artwork/featureIconRM_NOADS.png; sourceTree = "<group>"; };
+		14F83C42113723340096DE57 /* featureIconRM_RACKSPACE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = featureIconRM_RACKSPACE.png; path = Resources/Artwork/featureIconRM_RACKSPACE.png; sourceTree = "<group>"; };
+		14F83C43113723340096DE57 /* featureRM_IMAP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = featureRM_IMAP.png; path = Resources/Artwork/featureRM_IMAP.png; sourceTree = "<group>"; };
+		14F83C44113723340096DE57 /* featureRM_NOADS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = featureRM_NOADS.png; path = Resources/Artwork/featureRM_NOADS.png; sourceTree = "<group>"; };
+		14F83C45113723340096DE57 /* featureRM_RACKSPACE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = featureRM_RACKSPACE.png; path = Resources/Artwork/featureRM_RACKSPACE.png; sourceTree = "<group>"; };
+		14F83C46113723340096DE57 /* folderIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = folderIcon.png; path = Resources/Artwork/folderIcon.png; sourceTree = "<group>"; };
+		14F83C47113723340096DE57 /* foldersAll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = foldersAll.png; path = Resources/Artwork/foldersAll.png; sourceTree = "<group>"; };
+		14F83C48113723340096DE57 /* forwardedArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = forwardedArrow.png; path = Resources/Artwork/forwardedArrow.png; sourceTree = "<group>"; };
+		14F83C49113723340096DE57 /* homeBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homeBg.png; path = Resources/Artwork/homeBg.png; sourceTree = "<group>"; };
+		14F83C4A113723340096DE57 /* homeBgA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homeBgA.png; path = Resources/Artwork/homeBgA.png; sourceTree = "<group>"; };
+		14F83C4B113723340096DE57 /* homeBgNoLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homeBgNoLogo.png; path = Resources/Artwork/homeBgNoLogo.png; sourceTree = "<group>"; };
+		14F83C4C113723340096DE57 /* homeBtnFolders.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homeBtnFolders.png; path = Resources/Artwork/homeBtnFolders.png; sourceTree = "<group>"; };
+		14F83C4D113723340096DE57 /* homeBtnInbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homeBtnInbox.png; path = Resources/Artwork/homeBtnInbox.png; sourceTree = "<group>"; };
+		14F83C4E113723340096DE57 /* homeBtnSearch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homeBtnSearch.png; path = Resources/Artwork/homeBtnSearch.png; sourceTree = "<group>"; };
+		14F83C4F113723340096DE57 /* homeBtnSettings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homeBtnSettings.png; path = Resources/Artwork/homeBtnSettings.png; sourceTree = "<group>"; };
+		14F83C50113723340096DE57 /* homeBtnSettingsBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homeBtnSettingsBack.png; path = Resources/Artwork/homeBtnSettingsBack.png; sourceTree = "<group>"; };
+		14F83C51113723340096DE57 /* homeDFoldersA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homeDFoldersA.png; path = Resources/Artwork/homeDFoldersA.png; sourceTree = "<group>"; };
+		14F83C52113723340096DE57 /* homeDFoldersH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homeDFoldersH.png; path = Resources/Artwork/homeDFoldersH.png; sourceTree = "<group>"; };
+		14F83C53113723340096DE57 /* homeDSearchA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homeDSearchA.png; path = Resources/Artwork/homeDSearchA.png; sourceTree = "<group>"; };
+		14F83C54113723340096DE57 /* homeDSearchH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homeDSearchH.png; path = Resources/Artwork/homeDSearchH.png; sourceTree = "<group>"; };
+		14F83C55113723340096DE57 /* homeDSettingsA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homeDSettingsA.png; path = Resources/Artwork/homeDSettingsA.png; sourceTree = "<group>"; };
+		14F83C56113723340096DE57 /* homeDSettingsH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homeDSettingsH.png; path = Resources/Artwork/homeDSettingsH.png; sourceTree = "<group>"; };
+		14F83C57113723340096DE57 /* homeDUsageA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homeDUsageA.png; path = Resources/Artwork/homeDUsageA.png; sourceTree = "<group>"; };
+		14F83C58113723340096DE57 /* homeDUsageH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homeDUsageH.png; path = Resources/Artwork/homeDUsageH.png; sourceTree = "<group>"; };
+		14F83C59113723340096DE57 /* homeFFoldersA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homeFFoldersA.png; path = Resources/Artwork/homeFFoldersA.png; sourceTree = "<group>"; };
+		14F83C5A113723340096DE57 /* homeFFoldersH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homeFFoldersH.png; path = Resources/Artwork/homeFFoldersH.png; sourceTree = "<group>"; };
+		14F83C5B113723340096DE57 /* homeFoldersA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homeFoldersA.png; path = Resources/Artwork/homeFoldersA.png; sourceTree = "<group>"; };
+		14F83C5C113723340096DE57 /* homeFoldersH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homeFoldersH.png; path = Resources/Artwork/homeFoldersH.png; sourceTree = "<group>"; };
+		14F83C5D113723340096DE57 /* homeFSearchA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homeFSearchA.png; path = Resources/Artwork/homeFSearchA.png; sourceTree = "<group>"; };
+		14F83C5E113723340096DE57 /* homeFSearchH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homeFSearchH.png; path = Resources/Artwork/homeFSearchH.png; sourceTree = "<group>"; };
+		14F83C5F113723340096DE57 /* homeFSettingsA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homeFSettingsA.png; path = Resources/Artwork/homeFSettingsA.png; sourceTree = "<group>"; };
+		14F83C60113723340096DE57 /* homeFSettingsH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homeFSettingsH.png; path = Resources/Artwork/homeFSettingsH.png; sourceTree = "<group>"; };
+		14F83C61113723340096DE57 /* homeSearchA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homeSearchA.png; path = Resources/Artwork/homeSearchA.png; sourceTree = "<group>"; };
+		14F83C62113723340096DE57 /* homeSearchH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homeSearchH.png; path = Resources/Artwork/homeSearchH.png; sourceTree = "<group>"; };
+		14F83C63113723340096DE57 /* homeSettingsA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homeSettingsA.png; path = Resources/Artwork/homeSettingsA.png; sourceTree = "<group>"; };
+		14F83C64113723340096DE57 /* homeSettingsH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homeSettingsH.png; path = Resources/Artwork/homeSettingsH.png; sourceTree = "<group>"; };
+		14F83C65113723340096DE57 /* homeUsageA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homeUsageA.png; path = Resources/Artwork/homeUsageA.png; sourceTree = "<group>"; };
+		14F83C66113723340096DE57 /* homeUsageH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homeUsageH.png; path = Resources/Artwork/homeUsageH.png; sourceTree = "<group>"; };
+		14F83C67113723340096DE57 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = Resources/Artwork/icon.png; sourceTree = "<group>"; };
+		14F83C68113723340096DE57 /* iconPurchased.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iconPurchased.png; path = Resources/Artwork/iconPurchased.png; sourceTree = "<group>"; };
+		14F83C69113723340096DE57 /* introDownload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = introDownload.png; path = Resources/Artwork/introDownload.png; sourceTree = "<group>"; };
+		14F83C6A113723340096DE57 /* introImap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = introImap.png; path = Resources/Artwork/introImap.png; sourceTree = "<group>"; };
+		14F83C6B113723340096DE57 /* introResume.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = introResume.png; path = Resources/Artwork/introResume.png; sourceTree = "<group>"; };
+		14F83C6C113723340096DE57 /* introWifi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = introWifi.png; path = Resources/Artwork/introWifi.png; sourceTree = "<group>"; };
+		14F83C6D113723340096DE57 /* moreResults.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = moreResults.png; path = Resources/Artwork/moreResults.png; sourceTree = "<group>"; };
+		14F83C6E113723340096DE57 /* plainBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = plainBg.png; path = Resources/Artwork/plainBg.png; sourceTree = "<group>"; };
+		14F83C6F113723340096DE57 /* pushIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pushIcon.png; path = Resources/Artwork/pushIcon.png; sourceTree = "<group>"; };
+		14F83C70113723340096DE57 /* ranksNoTHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ranksNoTHighlight.png; path = Resources/Artwork/ranksNoTHighlight.png; sourceTree = "<group>"; };
+		14F83C71113723340096DE57 /* ranksNoTrophy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ranksNoTrophy.png; path = Resources/Artwork/ranksNoTrophy.png; sourceTree = "<group>"; };
+		14F83C72113723340096DE57 /* ranksTrophy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ranksTrophy.png; path = Resources/Artwork/ranksTrophy.png; sourceTree = "<group>"; };
+		14F83C73113723340096DE57 /* reMailAppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reMailAppIcon.png; path = Resources/Artwork/reMailAppIcon.png; sourceTree = "<group>"; };
+		14F83C74113723340096DE57 /* reMailAppIconElite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reMailAppIconElite.png; path = Resources/Artwork/reMailAppIconElite.png; sourceTree = "<group>"; };
+		14F83C75113723340096DE57 /* reMailAppIconGmail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reMailAppIconGmail.png; path = Resources/Artwork/reMailAppIconGmail.png; sourceTree = "<group>"; };
+		14F83C76113723340096DE57 /* reMailAppIconGold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reMailAppIconGold.png; path = Resources/Artwork/reMailAppIconGold.png; sourceTree = "<group>"; };
+		14F83C77113723340096DE57 /* remailTextTrans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = remailTextTrans.png; path = Resources/Artwork/remailTextTrans.png; sourceTree = "<group>"; };
+		14F83C78113723340096DE57 /* repliedArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = repliedArrow.png; path = Resources/Artwork/repliedArrow.png; sourceTree = "<group>"; };
+		14F83C79113723340096DE57 /* settingsAboutRemail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settingsAboutRemail.png; path = Resources/Artwork/settingsAboutRemail.png; sourceTree = "<group>"; };
+		14F83C7A113723340096DE57 /* settingsAccountGmailIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settingsAccountGmailIcon.png; path = Resources/Artwork/settingsAccountGmailIcon.png; sourceTree = "<group>"; };
+		14F83C7B113723340096DE57 /* settingsAccountImapIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settingsAccountImapIcon.png; path = Resources/Artwork/settingsAccountImapIcon.png; sourceTree = "<group>"; };
+		14F83C7C113723340096DE57 /* settingsAccountRackspaceIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settingsAccountRackspaceIcon.png; path = Resources/Artwork/settingsAccountRackspaceIcon.png; sourceTree = "<group>"; };
+		14F83C7D113723340096DE57 /* settingsAddAccountIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settingsAddAccountIcon.png; path = Resources/Artwork/settingsAddAccountIcon.png; sourceTree = "<group>"; };
+		14F83C7E113723340096DE57 /* settingsLoveRemail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settingsLoveRemail.png; path = Resources/Artwork/settingsLoveRemail.png; sourceTree = "<group>"; };
+		14F83C7F113723340096DE57 /* settingsPinCodeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settingsPinCodeIcon.png; path = Resources/Artwork/settingsPinCodeIcon.png; sourceTree = "<group>"; };
+		14F83C80113723340096DE57 /* settingsSupport.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settingsSupport.png; path = Resources/Artwork/settingsSupport.png; sourceTree = "<group>"; };
+		14F83C81113723340096DE57 /* statusBgNoLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = statusBgNoLogo.png; path = Resources/Artwork/statusBgNoLogo.png; sourceTree = "<group>"; };
+		14F83C82113723340096DE57 /* statusButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = statusButton.png; path = Resources/Artwork/statusButton.png; sourceTree = "<group>"; };
+		14F83C83113723340096DE57 /* t.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = t.png; path = Resources/Artwork/t.png; sourceTree = "<group>"; };
+		14F83C84113723340096DE57 /* textSearch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = textSearch.png; path = Resources/Artwork/textSearch.png; sourceTree = "<group>"; };
+		14F83C85113723340096DE57 /* toIndicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = toIndicator.png; path = Resources/Artwork/toIndicator.png; sourceTree = "<group>"; };
+		14F83C86113723340096DE57 /* toolbarSettings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = toolbarSettings.png; path = Resources/Artwork/toolbarSettings.png; sourceTree = "<group>"; };
+		14F83C87113723340096DE57 /* unreadIndicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = unreadIndicator.png; path = Resources/Artwork/unreadIndicator.png; sourceTree = "<group>"; };
+		14F83C88113723340096DE57 /* usageIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = usageIcon.png; path = Resources/Artwork/usageIcon.png; sourceTree = "<group>"; };
+		14F83D00113725450096DE57 /* sqlite3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sqlite3.c; path = sqlite3/sqlite3.c; sourceTree = "<group>"; };
+		14F83D01113725450096DE57 /* sqlite3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sqlite3.h; path = sqlite3/sqlite3.h; sourceTree = "<group>"; };
+		14F83D04113725E50096DE57 /* Attachment.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Attachment.xib; path = Resources/xibs/Attachment.xib; sourceTree = "<group>"; };
+		14F83D05113725E50096DE57 /* AutocompleteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AutocompleteCell.xib; path = Resources/xibs/AutocompleteCell.xib; sourceTree = "<group>"; };
+		14F83D07113725E50096DE57 /* FlexiConfig.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FlexiConfig.xib; path = Resources/xibs/FlexiConfig.xib; sourceTree = "<group>"; };
+		14F83D08113725E50096DE57 /* FolderList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FolderList.xib; path = Resources/xibs/FolderList.xib; sourceTree = "<group>"; };
+		14F83D09113725E50096DE57 /* FolderSelect.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FolderSelect.xib; path = Resources/xibs/FolderSelect.xib; sourceTree = "<group>"; };
+		14F83D0A113725E50096DE57 /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LoadingCell.xib; path = Resources/xibs/LoadingCell.xib; sourceTree = "<group>"; };
+		14F83D0B113725E50096DE57 /* LoveRemail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LoveRemail.xib; path = Resources/xibs/LoveRemail.xib; sourceTree = "<group>"; };
+		14F83D0C113725E50096DE57 /* MailboxView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MailboxView.xib; path = Resources/xibs/MailboxView.xib; sourceTree = "<group>"; };
+		14F83D0D113725E50096DE57 /* MailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MailCell.xib; path = Resources/xibs/MailCell.xib; sourceTree = "<group>"; };
+		14F83D0E113725E50096DE57 /* MailItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MailItemCell.xib; path = Resources/xibs/MailItemCell.xib; sourceTree = "<group>"; };
+		14F83D0F113725E50096DE57 /* Person.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Person.xib; path = Resources/xibs/Person.xib; sourceTree = "<group>"; };
+		14F83D10113725E50096DE57 /* ProgressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ProgressView.xib; path = Resources/xibs/ProgressView.xib; sourceTree = "<group>"; };
+		14F83D11113725E50096DE57 /* PushSetup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PushSetup.xib; path = Resources/xibs/PushSetup.xib; sourceTree = "<group>"; };
+		14F83D12113725E50096DE57 /* RootWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RootWindow.xib; path = Resources/xibs/RootWindow.xib; sourceTree = "<group>"; };
+		14F83D13113725E50096DE57 /* SearchResults.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SearchResults.xib; path = Resources/xibs/SearchResults.xib; sourceTree = "<group>"; };
+		14F83D14113725E50096DE57 /* SettingsList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SettingsList.xib; path = Resources/xibs/SettingsList.xib; sourceTree = "<group>"; };
+		14F83D15113725E50096DE57 /* Store.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Store.xib; path = Resources/xibs/Store.xib; sourceTree = "<group>"; };
+		14F83D16113725E50096DE57 /* StoreItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = StoreItem.xib; path = Resources/xibs/StoreItem.xib; sourceTree = "<group>"; };
+		14F83D17113725E50096DE57 /* StoreItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = StoreItemCell.xib; path = Resources/xibs/StoreItemCell.xib; sourceTree = "<group>"; };
+		14F83D18113725E50096DE57 /* Upsell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Upsell.xib; path = Resources/xibs/Upsell.xib; sourceTree = "<group>"; };
+		14F83D19113725E50096DE57 /* Usage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Usage.xib; path = Resources/xibs/Usage.xib; sourceTree = "<group>"; };
+		14F83D1A113725E50096DE57 /* WebView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = WebView.xib; path = Resources/xibs/WebView.xib; sourceTree = "<group>"; };
+		14F83D3E113726BB0096DE57 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = Classes/Reachability.h; sourceTree = "<group>"; };
+		14F83D3F113726E60096DE57 /* BuchheitTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BuchheitTimer.h; path = Classes/BuchheitTimer.h; sourceTree = "<group>"; };
+		14F83D40113726E60096DE57 /* BuchheitTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BuchheitTimer.m; path = Classes/BuchheitTimer.m; sourceTree = "<group>"; };
+		14F83D41113726E60096DE57 /* DateUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateUtil.h; path = Classes/DateUtil.h; sourceTree = "<group>"; };
+		14F83D42113726E60096DE57 /* DateUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateUtil.m; path = Classes/DateUtil.m; sourceTree = "<group>"; };
+		14F83D43113726E60096DE57 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Classes/main.m; sourceTree = "<group>"; };
+		14F83D44113726E60096DE57 /* StringUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StringUtil.h; path = Classes/StringUtil.h; sourceTree = "<group>"; };
+		14F83D45113726E60096DE57 /* StringUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StringUtil.m; path = Classes/StringUtil.m; sourceTree = "<group>"; };
+		14F84058113727AF0096DE57 /* AddEmailDBAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddEmailDBAccessor.h; path = Classes/AddEmailDBAccessor.h; sourceTree = "<group>"; };
+		14F84059113727AF0096DE57 /* AddEmailDBAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddEmailDBAccessor.m; path = Classes/AddEmailDBAccessor.m; sourceTree = "<group>"; };
+		14F8405A113727AF0096DE57 /* ContactDBAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactDBAccessor.h; path = Classes/ContactDBAccessor.h; sourceTree = "<group>"; };
+		14F8405B113727AF0096DE57 /* ContactDBAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactDBAccessor.m; path = Classes/ContactDBAccessor.m; sourceTree = "<group>"; };
+		14F8405C113727AF0096DE57 /* GlobalDBFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GlobalDBFunctions.h; path = Classes/GlobalDBFunctions.h; sourceTree = "<group>"; };
+		14F8405D113727AF0096DE57 /* GlobalDBFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GlobalDBFunctions.m; path = Classes/GlobalDBFunctions.m; sourceTree = "<group>"; };
+		14F8405E113727AF0096DE57 /* LoadEmailDBAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadEmailDBAccessor.h; path = Classes/LoadEmailDBAccessor.h; sourceTree = "<group>"; };
+		14F8405F113727AF0096DE57 /* LoadEmailDBAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoadEmailDBAccessor.m; path = Classes/LoadEmailDBAccessor.m; sourceTree = "<group>"; };
+		14F84060113727AF0096DE57 /* SearchEmailDBAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchEmailDBAccessor.h; path = Classes/SearchEmailDBAccessor.h; sourceTree = "<group>"; };
+		14F84061113727AF0096DE57 /* SearchEmailDBAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchEmailDBAccessor.m; path = Classes/SearchEmailDBAccessor.m; sourceTree = "<group>"; };
+		14F84062113727AF0096DE57 /* UidDBAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UidDBAccessor.h; path = Classes/UidDBAccessor.h; sourceTree = "<group>"; };
+		14F84063113727AF0096DE57 /* UidDBAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UidDBAccessor.m; path = Classes/UidDBAccessor.m; sourceTree = "<group>"; };
+		14F842C1113728830096DE57 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutViewController.h; path = Classes/AboutViewController.h; sourceTree = "<group>"; };
+		14F842C2113728830096DE57 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutViewController.m; path = Classes/AboutViewController.m; sourceTree = "<group>"; };
+		14F842C3113728830096DE57 /* AccountTypeSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountTypeSelectViewController.h; path = Classes/AccountTypeSelectViewController.h; sourceTree = "<group>"; };
+		14F842C4113728830096DE57 /* AccountTypeSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccountTypeSelectViewController.m; path = Classes/AccountTypeSelectViewController.m; sourceTree = "<group>"; };
+		14F842C5113728830096DE57 /* AttachmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttachmentViewController.h; path = Classes/AttachmentViewController.h; sourceTree = "<group>"; };
+		14F842C6113728830096DE57 /* AttachmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AttachmentViewController.m; path = Classes/AttachmentViewController.m; sourceTree = "<group>"; };
+		14F842C7113728830096DE57 /* AutocompleteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AutocompleteCell.h; path = Classes/AutocompleteCell.h; sourceTree = "<group>"; };
+		14F842C8113728830096DE57 /* AutocompleteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AutocompleteCell.m; path = Classes/AutocompleteCell.m; sourceTree = "<group>"; };
+		14F842C9113728830096DE57 /* ErrorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorViewController.h; path = Classes/ErrorViewController.h; sourceTree = "<group>"; };
+		14F842CA113728830096DE57 /* ErrorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ErrorViewController.m; path = Classes/ErrorViewController.m; sourceTree = "<group>"; };
+		14F842CB113728830096DE57 /* FlexiConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlexiConfigViewController.h; path = Classes/FlexiConfigViewController.h; sourceTree = "<group>"; };
+		14F842CC113728830096DE57 /* FlexiConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlexiConfigViewController.m; path = Classes/FlexiConfigViewController.m; sourceTree = "<group>"; };
+		14F842CD113728830096DE57 /* FolderListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FolderListViewController.h; path = Classes/FolderListViewController.h; sourceTree = "<group>"; };
+		14F842CE113728830096DE57 /* FolderListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FolderListViewController.m; path = Classes/FolderListViewController.m; sourceTree = "<group>"; };
+		14F842CF113728830096DE57 /* FolderSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FolderSelectViewController.h; path = Classes/FolderSelectViewController.h; sourceTree = "<group>"; };
+		14F842D0113728830096DE57 /* FolderSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FolderSelectViewController.m; path = Classes/FolderSelectViewController.m; sourceTree = "<group>"; };
+		14F842D1113728830096DE57 /* GmailConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GmailConfigViewController.h; path = Classes/GmailConfigViewController.h; sourceTree = "<group>"; };
+		14F842D2113728830096DE57 /* GmailConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GmailConfigViewController.m; path = Classes/GmailConfigViewController.m; sourceTree = "<group>"; };
+		14F842D3113728830096DE57 /* ImapConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImapConfigViewController.h; path = Classes/ImapConfigViewController.h; sourceTree = "<group>"; };
+		14F842D4113728830096DE57 /* ImapConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImapConfigViewController.m; path = Classes/ImapConfigViewController.m; sourceTree = "<group>"; };
+		14F842D5113728830096DE57 /* MailItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MailItemCell.h; path = Classes/MailItemCell.h; sourceTree = "<group>"; };
+		14F842D6113728830096DE57 /* MailItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MailItemCell.m; path = Classes/MailItemCell.m; sourceTree = "<group>"; };
+		14F842D7113728830096DE57 /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProgressView.h; path = Classes/ProgressView.h; sourceTree = "<group>"; };
+		14F842D8113728830096DE57 /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProgressView.m; path = Classes/ProgressView.m; sourceTree = "<group>"; };
+		14F842D9113728830096DE57 /* PushSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PushSetupViewController.h; path = Classes/PushSetupViewController.h; sourceTree = "<group>"; };
+		14F842DA113728830096DE57 /* PushSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PushSetupViewController.m; path = Classes/PushSetupViewController.m; sourceTree = "<group>"; };
+		14F842DB113728830096DE57 /* SettingsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsListViewController.h; path = Classes/SettingsListViewController.h; sourceTree = "<group>"; };
+		14F842DC113728830096DE57 /* SettingsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsListViewController.m; path = Classes/SettingsListViewController.m; sourceTree = "<group>"; };
+		14F842DD113728830096DE57 /* UpsellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UpsellViewController.h; path = Classes/UpsellViewController.h; sourceTree = "<group>"; };
+		14F842DE113728830096DE57 /* UpsellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UpsellViewController.m; path = Classes/UpsellViewController.m; sourceTree = "<group>"; };
+		14F842DF113728830096DE57 /* UsageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UsageViewController.h; path = Classes/UsageViewController.h; sourceTree = "<group>"; };
+		14F842E0113728830096DE57 /* UsageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UsageViewController.m; path = Classes/UsageViewController.m; sourceTree = "<group>"; };
+		14F842F111372B6E0096DE57 /* StoreItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoreItemCell.h; path = Classes/StoreItemCell.h; sourceTree = "<group>"; };
+		14F842F211372B6E0096DE57 /* StoreItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoreItemCell.m; path = Classes/StoreItemCell.m; sourceTree = "<group>"; };
+		14F842F311372B6E0096DE57 /* StoreItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoreItemViewController.h; path = Classes/StoreItemViewController.h; sourceTree = "<group>"; };
+		14F842F411372B6E0096DE57 /* StoreItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoreItemViewController.m; path = Classes/StoreItemViewController.m; sourceTree = "<group>"; };
+		14F842F511372B6E0096DE57 /* StoreObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoreObserver.h; path = Classes/StoreObserver.h; sourceTree = "<group>"; };
+		14F842F611372B6E0096DE57 /* StoreObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoreObserver.m; path = Classes/StoreObserver.m; sourceTree = "<group>"; };
+		14F842F711372B6E0096DE57 /* StoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoreViewController.h; path = Classes/StoreViewController.h; sourceTree = "<group>"; };
+		14F842F811372B6E0096DE57 /* StoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoreViewController.m; path = Classes/StoreViewController.m; sourceTree = "<group>"; };
+		14F842FD11372BB40096DE57 /* SearchRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchRunner.h; path = Classes/SearchRunner.h; sourceTree = "<group>"; };
+		14F842FE11372BB40096DE57 /* SearchRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchRunner.m; path = Classes/SearchRunner.m; sourceTree = "<group>"; };
+		14F8430011372C340096DE57 /* AttachmentDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttachmentDownloader.h; path = Classes/AttachmentDownloader.h; sourceTree = "<group>"; };
+		14F8430111372C340096DE57 /* AttachmentDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AttachmentDownloader.m; path = Classes/AttachmentDownloader.m; sourceTree = "<group>"; };
+		14F8430211372C340096DE57 /* EmailProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EmailProcessor.h; path = Classes/EmailProcessor.h; sourceTree = "<group>"; };
+		14F8430311372C340096DE57 /* EmailProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EmailProcessor.m; path = Classes/EmailProcessor.m; sourceTree = "<group>"; };
+		14F8430411372C340096DE57 /* ImapFolderWorker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImapFolderWorker.h; path = Classes/ImapFolderWorker.h; sourceTree = "<group>"; };
+		14F8430511372C340096DE57 /* ImapFolderWorker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImapFolderWorker.m; path = Classes/ImapFolderWorker.m; sourceTree = "<group>"; };
+		14F8430611372C340096DE57 /* ImapSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImapSync.h; path = Classes/ImapSync.h; sourceTree = "<group>"; };
+		14F8430711372C340096DE57 /* ImapSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImapSync.m; path = Classes/ImapSync.m; sourceTree = "<group>"; };
+		14F8430811372C340096DE57 /* SyncManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SyncManager.h; path = Classes/SyncManager.h; sourceTree = "<group>"; };
+		14F8430911372C340096DE57 /* SyncManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SyncManager.m; path = Classes/SyncManager.m; sourceTree = "<group>"; };
+		14F8431411372CE00096DE57 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSON.h; path = Classes/JSON.h; sourceTree = "<group>"; };
+		14F8431511372CE00096DE57 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+SBJSON.h"; path = "Classes/NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		14F8431611372CE00096DE57 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+SBJSON.m"; path = "Classes/NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		14F8431711372CE00096DE57 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+SBJSON.h"; path = "Classes/NSString+SBJSON.h"; sourceTree = "<group>"; };
+		14F8431811372CE00096DE57 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+SBJSON.m"; path = "Classes/NSString+SBJSON.m"; sourceTree = "<group>"; };
+		14F8431911372CE00096DE57 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJSON.h; path = Classes/SBJSON.h; sourceTree = "<group>"; };
+		14F8431A11372CE00096DE57 /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJSON.m; path = Classes/SBJSON.m; sourceTree = "<group>"; };
+		14F8432311372EF30096DE57 /* aboutGabor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = aboutGabor.jpg; path = Resources/Artwork/aboutGabor.jpg; sourceTree = "<group>"; };
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D6058910D05DD3D006BFB54 /* reMail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = reMail.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		200437120F5DFFF9007D450A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		20DB96D30F5CBA1C0015FE73 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = Classes/Reachability.m; sourceTree = "<group>"; };
+		20DB96ED0F5CBB0C0015FE73 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = /System/Library/Frameworks/SystemConfiguration.framework; sourceTree = "<absolute>"; };
+		288765070DF74369002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8618DC810DAE4A100C41188 /* MailCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MailCore.xcodeproj; path = ../mailcore/MailCore.xcodeproj; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8618DDD10DAE4C600C41188 /* libmailcore.a in Frameworks */,
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */,
+				20DB96EE0F5CBB0C0015FE73 /* SystemConfiguration.framework in Frameworks */,
+				14F49D9A0FCA0B60003B9CAF /* QuartzCore.framework in Frameworks */,
+				14E64FD60FEC5139000A0962 /* MessageUI.framework in Frameworks */,
+				14E64FE10FEC51B4000A0962 /* UIKit.framework in Frameworks */,
+				142A6C280FF2C8D800BEF19F /* libiconv.2.dylib in Frameworks */,
+				14DF9DAC105E525000A59D6D /* CoreLocation.framework in Frameworks */,
+				14E5E17510853B58007C241E /* AddressBook.framework in Frameworks */,
+				14D74A1610AB7DD10019FB1F /* StoreKit.framework in Frameworks */,
+				14019B9D10DC26850000859B /* libssl.a in Frameworks */,
+				14019B9F10DC26940000859B /* libcrypto.a in Frameworks */,
+				14019BA110DC26A40000859B /* libsasl2.a in Frameworks */,
+				141887E9113214A400A8ED15 /* libThree20.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				14BF0A310FF017CE00A092C5 /* ContactName.h */,
+				14BF0A320FF017CE00A092C5 /* ContactName.m */,
+				141E29670FE7520F007D6EB4 /* PastQuery.h */,
+				141E29680FE7520F007D6EB4 /* PastQuery.m */,
+				14C4C8A30F2538AE00BFFF6B /* Email.h */,
+				14C4C8A40F2538AE00BFFF6B /* Email.m */,
+				148938540FF9A9AA00AFAD05 /* UidEntry.h */,
+				148938550FF9A9AA00AFAD05 /* UidEntry.m */,
+			);
+			name = Models;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		141887C2113213B700A8ED15 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				141887C7113213B700A8ED15 /* libThree20.a */,
+				141887C9113213B700A8ED15 /* UnitTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		142A6BE10FF2C86E00BEF19F /* MailCore */ = {
+			isa = PBXGroup;
+			children = (
+				14D96BF40FF43639008F3BCC /* CTCoreMessage+ReMail.h */,
+				14D96BF20FF4362C008F3BCC /* CTCoreMessage+ReMail.m */,
+			);
+			path = MailCore;
+			sourceTree = "<group>";
+		};
+		1439C4F11090D928006CE583 /* Artwork */ = {
+			isa = PBXGroup;
+			children = (
+				14F8432311372EF30096DE57 /* aboutGabor.jpg */,
+				14F83C28113723340096DE57 /* aboutGoogle.png */,
+				14F83C29113723340096DE57 /* accountsConfigIcon.png */,
+				14F83C2A113723340096DE57 /* accountTypeIconGmail.png */,
+				14F83C2B113723340096DE57 /* accountTypeIconImap.png */,
+				14F83C2C113723340096DE57 /* accountTypeIconRackspace.png */,
+				14F83C2D113723340096DE57 /* attachment.png */,
+				14F83C2E113723340096DE57 /* checkbox.png */,
+				14F83C2F113723340096DE57 /* checkboxChecked.png */,
+				14F83C30113723340096DE57 /* collapseButton.png */,
+				14F83C31113723340096DE57 /* convoMe.png */,
+				14F83C32113723340096DE57 /* convoPerson1.png */,
+				14F83C33113723340096DE57 /* convoPerson2.png */,
+				14F83C34113723340096DE57 /* convoPerson3.png */,
+				14F83C35113723340096DE57 /* convoPerson4.png */,
+				14F83C36113723340096DE57 /* convoPerson5.png */,
+				14F83C37113723340096DE57 /* convoPerson6.png */,
+				14F83C38113723340096DE57 /* convoPerson7.png */,
+				14F83C39113723340096DE57 /* convoPerson8.png */,
+				14F83C3A113723340096DE57 /* convoPerson9.png */,
+				14F83C3B113723340096DE57 /* copyModeOff.png */,
+				14F83C3C113723340096DE57 /* copyModeOn.png */,
+				14F83C3D113723340096DE57 /* Default.png */,
+				14F83C3E113723340096DE57 /* errorBtnBgError.png */,
+				14F83C3F113723340096DE57 /* errorDetailLink.png */,
+				14F83C40113723340096DE57 /* featureIconRM_IMAP.png */,
+				14F83C41113723340096DE57 /* featureIconRM_NOADS.png */,
+				14F83C42113723340096DE57 /* featureIconRM_RACKSPACE.png */,
+				14F83C43113723340096DE57 /* featureRM_IMAP.png */,
+				14F83C44113723340096DE57 /* featureRM_NOADS.png */,
+				14F83C45113723340096DE57 /* featureRM_RACKSPACE.png */,
+				14F83C46113723340096DE57 /* folderIcon.png */,
+				14F83C47113723340096DE57 /* foldersAll.png */,
+				14F83C48113723340096DE57 /* forwardedArrow.png */,
+				14F83C49113723340096DE57 /* homeBg.png */,
+				14F83C4A113723340096DE57 /* homeBgA.png */,
+				14F83C4B113723340096DE57 /* homeBgNoLogo.png */,
+				14F83C4C113723340096DE57 /* homeBtnFolders.png */,
+				14F83C4D113723340096DE57 /* homeBtnInbox.png */,
+				14F83C4E113723340096DE57 /* homeBtnSearch.png */,
+				14F83C4F113723340096DE57 /* homeBtnSettings.png */,
+				14F83C50113723340096DE57 /* homeBtnSettingsBack.png */,
+				14F83C51113723340096DE57 /* homeDFoldersA.png */,
+				14F83C52113723340096DE57 /* homeDFoldersH.png */,
+				14F83C53113723340096DE57 /* homeDSearchA.png */,
+				14F83C54113723340096DE57 /* homeDSearchH.png */,
+				14F83C55113723340096DE57 /* homeDSettingsA.png */,
+				14F83C56113723340096DE57 /* homeDSettingsH.png */,
+				14F83C57113723340096DE57 /* homeDUsageA.png */,
+				14F83C58113723340096DE57 /* homeDUsageH.png */,
+				14F83C59113723340096DE57 /* homeFFoldersA.png */,
+				14F83C5A113723340096DE57 /* homeFFoldersH.png */,
+				14F83C5B113723340096DE57 /* homeFoldersA.png */,
+				14F83C5C113723340096DE57 /* homeFoldersH.png */,
+				14F83C5D113723340096DE57 /* homeFSearchA.png */,
+				14F83C5E113723340096DE57 /* homeFSearchH.png */,
+				14F83C5F113723340096DE57 /* homeFSettingsA.png */,
+				14F83C60113723340096DE57 /* homeFSettingsH.png */,
+				14F83C61113723340096DE57 /* homeSearchA.png */,
+				14F83C62113723340096DE57 /* homeSearchH.png */,
+				14F83C63113723340096DE57 /* homeSettingsA.png */,
+				14F83C64113723340096DE57 /* homeSettingsH.png */,
+				14F83C65113723340096DE57 /* homeUsageA.png */,
+				14F83C66113723340096DE57 /* homeUsageH.png */,
+				14F83C67113723340096DE57 /* icon.png */,
+				14F83C68113723340096DE57 /* iconPurchased.png */,
+				14F83C69113723340096DE57 /* introDownload.png */,
+				14F83C6A113723340096DE57 /* introImap.png */,
+				14F83C6B113723340096DE57 /* introResume.png */,
+				14F83C6C113723340096DE57 /* introWifi.png */,
+				14F83C6D113723340096DE57 /* moreResults.png */,
+				14F83C6E113723340096DE57 /* plainBg.png */,
+				14F83C6F113723340096DE57 /* pushIcon.png */,
+				14F83C70113723340096DE57 /* ranksNoTHighlight.png */,
+				14F83C71113723340096DE57 /* ranksNoTrophy.png */,
+				14F83C72113723340096DE57 /* ranksTrophy.png */,
+				14F83C73113723340096DE57 /* reMailAppIcon.png */,
+				14F83C74113723340096DE57 /* reMailAppIconElite.png */,
+				14F83C75113723340096DE57 /* reMailAppIconGmail.png */,
+				14F83C76113723340096DE57 /* reMailAppIconGold.png */,
+				14F83C77113723340096DE57 /* remailTextTrans.png */,
+				14F83C78113723340096DE57 /* repliedArrow.png */,
+				14F83C79113723340096DE57 /* settingsAboutRemail.png */,
+				14F83C7A113723340096DE57 /* settingsAccountGmailIcon.png */,
+				14F83C7B113723340096DE57 /* settingsAccountImapIcon.png */,
+				14F83C7C113723340096DE57 /* settingsAccountRackspaceIcon.png */,
+				14F83C7D113723340096DE57 /* settingsAddAccountIcon.png */,
+				14F83C7E113723340096DE57 /* settingsLoveRemail.png */,
+				14F83C7F113723340096DE57 /* settingsPinCodeIcon.png */,
+				14F83C80113723340096DE57 /* settingsSupport.png */,
+				14F83C81113723340096DE57 /* statusBgNoLogo.png */,
+				14F83C82113723340096DE57 /* statusButton.png */,
+				14F83C83113723340096DE57 /* t.png */,
+				14F83C84113723340096DE57 /* textSearch.png */,
+				14F83C85113723340096DE57 /* toIndicator.png */,
+				14F83C86113723340096DE57 /* toolbarSettings.png */,
+				14F83C87113723340096DE57 /* unreadIndicator.png */,
+				14F83C88113723340096DE57 /* usageIcon.png */,
+			);
+			name = Artwork;
+			sourceTree = "<group>";
+		};
+		1439C4F21090D936006CE583 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				14F83D04113725E50096DE57 /* Attachment.xib */,
+				14F83D05113725E50096DE57 /* AutocompleteCell.xib */,
+				14F83D07113725E50096DE57 /* FlexiConfig.xib */,
+				14F83D08113725E50096DE57 /* FolderList.xib */,
+				14F83D09113725E50096DE57 /* FolderSelect.xib */,
+				14F83D0A113725E50096DE57 /* LoadingCell.xib */,
+				14F83D0B113725E50096DE57 /* LoveRemail.xib */,
+				14F83D0C113725E50096DE57 /* MailboxView.xib */,
+				14F83D0D113725E50096DE57 /* MailCell.xib */,
+				14F83D0E113725E50096DE57 /* MailItemCell.xib */,
+				14F83D0F113725E50096DE57 /* Person.xib */,
+				14F83D10113725E50096DE57 /* ProgressView.xib */,
+				14F83D11113725E50096DE57 /* PushSetup.xib */,
+				14F83D12113725E50096DE57 /* RootWindow.xib */,
+				14F83D13113725E50096DE57 /* SearchResults.xib */,
+				14F83D14113725E50096DE57 /* SettingsList.xib */,
+				14F83D15113725E50096DE57 /* Store.xib */,
+				14F83D16113725E50096DE57 /* StoreItem.xib */,
+				14F83D17113725E50096DE57 /* StoreItemCell.xib */,
+				14F83D18113725E50096DE57 /* Upsell.xib */,
+				14F83D19113725E50096DE57 /* Usage.xib */,
+				14F83D1A113725E50096DE57 /* WebView.xib */,
+				14E5E0A310852DE1007C241E /* About.xib */,
+				146CABFA105D51F6003D2E99 /* ErrorView.xib */,
+				14CEB03E1010994D00025F41 /* AccountTypeSelect.xib */,
+				14CEB0431010997400025F41 /* GmailConfig.xib */,
+				14CEB0461010998400025F41 /* HomeView.xib */,
+				14CEB0491010999200025F41 /* ImapConfig.xib */,
+				14CEB04C101099A200025F41 /* Intro.xib */,
+				14CEB04F101099AE00025F41 /* SearchEntryView.xib */,
+				14CEB052101099BA00025F41 /* Status.xib */,
+			);
+			name = Xibs;
+			sourceTree = "<group>";
+		};
+		147BBF240F38DAE500345343 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				14F83D43113726E60096DE57 /* main.m */,
+				14F83D44113726E60096DE57 /* StringUtil.h */,
+				14F83D45113726E60096DE57 /* StringUtil.m */,
+				14F83D3F113726E60096DE57 /* BuchheitTimer.h */,
+				14F83D40113726E60096DE57 /* BuchheitTimer.m */,
+				14F83D41113726E60096DE57 /* DateUtil.h */,
+				14F83D42113726E60096DE57 /* DateUtil.m */,
+				14F83D3E113726BB0096DE57 /* Reachability.h */,
+				20DB96D30F5CBA1C0015FE73 /* Reachability.m */,
+				147BBF2A0F38DB1800345343 /* AppSettings.h */,
+				147BBF2B0F38DB1800345343 /* AppSettings.m */,
+				146D1B1F0F4568BE005439E5 /* ActivityIndicator.h */,
+				146D1B200F4568BE005439E5 /* ActivityIndicator.m */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		148936C30FF97E7D00AFAD05 /* sqlite3 */ = {
+			isa = PBXGroup;
+			children = (
+				14F83D00113725450096DE57 /* sqlite3.c */,
+				14F83D01113725450096DE57 /* sqlite3.h */,
+			);
+			name = sqlite3;
+			sourceTree = "<group>";
+		};
+		148937030FF987B700AFAD05 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				14F842FD11372BB40096DE57 /* SearchRunner.h */,
+				14F842FE11372BB40096DE57 /* SearchRunner.m */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		14C4C95A0F253DBA00BFFF6B /* UIClasses */ = {
+			isa = PBXGroup;
+			children = (
+				14F842C1113728830096DE57 /* AboutViewController.h */,
+				14F842C2113728830096DE57 /* AboutViewController.m */,
+				14F842C3113728830096DE57 /* AccountTypeSelectViewController.h */,
+				14F842C4113728830096DE57 /* AccountTypeSelectViewController.m */,
+				14F842C5113728830096DE57 /* AttachmentViewController.h */,
+				14F842C6113728830096DE57 /* AttachmentViewController.m */,
+				14F842C7113728830096DE57 /* AutocompleteCell.h */,
+				14F842C8113728830096DE57 /* AutocompleteCell.m */,
+				14F842C9113728830096DE57 /* ErrorViewController.h */,
+				14F842CA113728830096DE57 /* ErrorViewController.m */,
+				14F842CB113728830096DE57 /* FlexiConfigViewController.h */,
+				14F842CC113728830096DE57 /* FlexiConfigViewController.m */,
+				14F842CD113728830096DE57 /* FolderListViewController.h */,
+				14F842CE113728830096DE57 /* FolderListViewController.m */,
+				14F842CF113728830096DE57 /* FolderSelectViewController.h */,
+				14F842D0113728830096DE57 /* FolderSelectViewController.m */,
+				14F842D1113728830096DE57 /* GmailConfigViewController.h */,
+				14F842D2113728830096DE57 /* GmailConfigViewController.m */,
+				14F842D3113728830096DE57 /* ImapConfigViewController.h */,
+				14F842D4113728830096DE57 /* ImapConfigViewController.m */,
+				14F842D5113728830096DE57 /* MailItemCell.h */,
+				14F842D6113728830096DE57 /* MailItemCell.m */,
+				14F842D7113728830096DE57 /* ProgressView.h */,
+				14F842D8113728830096DE57 /* ProgressView.m */,
+				14F842D9113728830096DE57 /* PushSetupViewController.h */,
+				14F842DA113728830096DE57 /* PushSetupViewController.m */,
+				14F842DB113728830096DE57 /* SettingsListViewController.h */,
+				14F842DC113728830096DE57 /* SettingsListViewController.m */,
+				14F842DD113728830096DE57 /* UpsellViewController.h */,
+				14F842DE113728830096DE57 /* UpsellViewController.m */,
+				14F842DF113728830096DE57 /* UsageViewController.h */,
+				14F842E0113728830096DE57 /* UsageViewController.m */,
+				148110580F410F13000E3CBD /* ReMailAppDelegate.h */,
+				148110590F410F13000E3CBD /* ReMailAppDelegate.m */,
+				140382810F296B8D00531DB7 /* HomeViewController.h */,
+				1403827F0F296B6900531DB7 /* HomeViewController.m */,
+				14D96E100FF5B0B4008F3BCC /* IntroViewController.h */,
+				14D96E110FF5B0B4008F3BCC /* IntroViewController.m */,
+				14C4C9400F253DB100BFFF6B /* MailboxViewController.h */,
+				14C4C9410F253DB100BFFF6B /* MailboxViewController.m */,
+				14C4C9420F253DB100BFFF6B /* MailViewController.h */,
+				14C4C9430F253DB100BFFF6B /* MailViewController.m */,
+				14C4C9440F253DB100BFFF6B /* SearchEntryViewController.h */,
+				14C4C9450F253DB100BFFF6B /* SearchEntryViewController.m */,
+				14C4C9460F253DB100BFFF6B /* SearchResultsViewController.h */,
+				14C4C9470F253DB100BFFF6B /* SearchResultsViewController.m */,
+				14D96EEB0FF6E990008F3BCC /* StatusViewController.h */,
+				14D96EEC0FF6E990008F3BCC /* StatusViewController.m */,
+				14E64AF60FEB29E3000A0962 /* MailCell.h */,
+				14E64AF70FEB29E3000A0962 /* MailCell.m */,
+				14E64AB10FEB26B6000A0962 /* LoadingCell.h */,
+				14E64AB20FEB26B6000A0962 /* LoadingCell.m */,
+				14E95472104484C8006ABA93 /* WebViewController.h */,
+				14E95473104484C8006ABA93 /* WebViewController.m */,
+			);
+			name = UIClasses;
+			sourceTree = "<group>";
+		};
+		14D749A910AB6D910019FB1F /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				14F842F111372B6E0096DE57 /* StoreItemCell.h */,
+				14F842F211372B6E0096DE57 /* StoreItemCell.m */,
+				14F842F311372B6E0096DE57 /* StoreItemViewController.h */,
+				14F842F411372B6E0096DE57 /* StoreItemViewController.m */,
+				14F842F511372B6E0096DE57 /* StoreObserver.h */,
+				14F842F611372B6E0096DE57 /* StoreObserver.m */,
+				14F842F711372B6E0096DE57 /* StoreViewController.h */,
+				14F842F811372B6E0096DE57 /* StoreViewController.m */,
+			);
+			name = Store;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* reMail.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		207A09F50F53269D0092E457 /* Sync */ = {
+			isa = PBXGroup;
+			children = (
+				14F8430811372C340096DE57 /* SyncManager.h */,
+				14F8430911372C340096DE57 /* SyncManager.m */,
+				14F8430611372C340096DE57 /* ImapSync.h */,
+				14F8430711372C340096DE57 /* ImapSync.m */,
+				14F8430411372C340096DE57 /* ImapFolderWorker.h */,
+				14F8430511372C340096DE57 /* ImapFolderWorker.m */,
+				14F8430211372C340096DE57 /* EmailProcessor.h */,
+				14F8430311372C340096DE57 /* EmailProcessor.m */,
+				14F8430011372C340096DE57 /* AttachmentDownloader.h */,
+				14F8430111372C340096DE57 /* AttachmentDownloader.m */,
+			);
+			name = Sync;
+			sourceTree = "<group>";
+		};
+		207A09F60F5326B20092E457 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				14F8431411372CE00096DE57 /* JSON.h */,
+				14F8431511372CE00096DE57 /* NSObject+SBJSON.h */,
+				14F8431611372CE00096DE57 /* NSObject+SBJSON.m */,
+				14F8431711372CE00096DE57 /* NSString+SBJSON.h */,
+				14F8431811372CE00096DE57 /* NSString+SBJSON.m */,
+				14F8431911372CE00096DE57 /* SBJSON.h */,
+				14F8431A11372CE00096DE57 /* SBJSON.m */,
+			);
+			name = JSON;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* NextMailIPhone */ = {
+			isa = PBXGroup;
+			children = (
+				141887D91132143D00A8ED15 /* Three20.bundle */,
+				141887C1113213B700A8ED15 /* Three20.xcodeproj */,
+				F8618DC810DAE4A100C41188 /* MailCore.xcodeproj */,
+				207A09F50F53269D0092E457 /* Sync */,
+				148937030FF987B700AFAD05 /* Search */,
+				14D749A910AB6D910019FB1F /* Store */,
+				14C4C95A0F253DBA00BFFF6B /* UIClasses */,
+				080E96DDFE201D6D7F000001 /* Models */,
+				29B97315FDCFA39411CA2CEA /* DBAccessors */,
+				148936C30FF97E7D00AFAD05 /* sqlite3 */,
+				207A09F60F5326B20092E457 /* JSON */,
+				142A6BE10FF2C86E00BEF19F /* MailCore */,
+				147BBF240F38DAE500345343 /* Other */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				147BBE780F38CA0200345343 /* Settings.bundle */,
+				1451CEF70F6984EE007AF1C6 /* dist.plist */,
+			);
+			name = NextMailIPhone;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* DBAccessors */ = {
+			isa = PBXGroup;
+			children = (
+				14F84058113727AF0096DE57 /* AddEmailDBAccessor.h */,
+				14F84059113727AF0096DE57 /* AddEmailDBAccessor.m */,
+				14F8405A113727AF0096DE57 /* ContactDBAccessor.h */,
+				14F8405B113727AF0096DE57 /* ContactDBAccessor.m */,
+				14F8405C113727AF0096DE57 /* GlobalDBFunctions.h */,
+				14F8405D113727AF0096DE57 /* GlobalDBFunctions.m */,
+				14F8405E113727AF0096DE57 /* LoadEmailDBAccessor.h */,
+				14F8405F113727AF0096DE57 /* LoadEmailDBAccessor.m */,
+				14F84060113727AF0096DE57 /* SearchEmailDBAccessor.h */,
+				14F84061113727AF0096DE57 /* SearchEmailDBAccessor.m */,
+				14F84062113727AF0096DE57 /* UidDBAccessor.h */,
+				14F84063113727AF0096DE57 /* UidDBAccessor.m */,
+			);
+			name = DBAccessors;
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				14CEB02E1010987500025F41 /* Localizable.strings */,
+				1439C4F21090D936006CE583 /* Xibs */,
+				1439C4F11090D928006CE583 /* Artwork */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				140909BF1014133A000D9121 /* notice.txt */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14E64FE00FEC51B4000A0962 /* UIKit.framework */,
+				14E64FD50FEC5139000A0962 /* MessageUI.framework */,
+				14F49D990FCA0B60003B9CAF /* QuartzCore.framework */,
+				20DB96ED0F5CBB0C0015FE73 /* SystemConfiguration.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765070DF74369002DB57D /* CoreGraphics.framework */,
+				14E5E17410853B58007C241E /* AddressBook.framework */,
+				14D74A1510AB7DD10019FB1F /* StoreKit.framework */,
+				200437120F5DFFF9007D450A /* SystemConfiguration.framework */,
+				14DF9DAB105E525000A59D6D /* CoreLocation.framework */,
+				14019B9C10DC26850000859B /* libssl.a */,
+				142A6C270FF2C8D800BEF19F /* libiconv.2.dylib */,
+				14019BA010DC26A40000859B /* libsasl2.a */,
+				14019B9E10DC26940000859B /* libcrypto.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8618DC910DAE4A100C41188 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8618DD610DAE4A100C41188 /* MailCore.framework */,
+				F8618DD810DAE4A100C41188 /* Tests.octest */,
+				F8618DDA10DAE4A100C41188 /* libmailcore.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* ReMail */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "ReMail" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+				1433CCCE0F79883B001BEFC5 /* CopyFiles */,
+				1433CCDB0F7988BE001BEFC5 /* CopyFiles */,
+				1433CCDC0F7988BE001BEFC5 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F8618DDC10DAE4B800C41188 /* PBXTargetDependency */,
+				141887D71132141600A8ED15 /* PBXTargetDependency */,
+			);
+			name = ReMail;
+			productName = NextMailIPhone;
+			productReference = 1D6058910D05DD3D006BFB54 /* reMail.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "ReMailIPhone" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				de,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* NextMailIPhone */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F8618DC910DAE4A100C41188 /* Products */;
+					ProjectRef = F8618DC810DAE4A100C41188 /* MailCore.xcodeproj */;
+				},
+				{
+					ProductGroup = 141887C2113213B700A8ED15 /* Products */;
+					ProjectRef = 141887C1113213B700A8ED15 /* Three20.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* ReMail */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		141887C7113213B700A8ED15 /* libThree20.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libThree20.a;
+			remoteRef = 141887C6113213B700A8ED15 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		141887C9113213B700A8ED15 /* UnitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UnitTests.octest;
+			remoteRef = 141887C8113213B700A8ED15 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F8618DD610DAE4A100C41188 /* MailCore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MailCore.framework;
+			remoteRef = F8618DD510DAE4A100C41188 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F8618DD810DAE4A100C41188 /* Tests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = Tests.octest;
+			remoteRef = F8618DD710DAE4A100C41188 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F8618DDA10DAE4A100C41188 /* libmailcore.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libmailcore.a;
+			remoteRef = F8618DD910DAE4A100C41188 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				147BBE790F38CA0200345343 /* Settings.bundle in Resources */,
+				1451CEF80F6984EE007AF1C6 /* dist.plist in Resources */,
+				14CEB02F1010987500025F41 /* Localizable.strings in Resources */,
+				14CEB03F1010994D00025F41 /* AccountTypeSelect.xib in Resources */,
+				14CEB0441010997400025F41 /* GmailConfig.xib in Resources */,
+				14CEB0471010998400025F41 /* HomeView.xib in Resources */,
+				14CEB04A1010999200025F41 /* ImapConfig.xib in Resources */,
+				14CEB04D101099A200025F41 /* Intro.xib in Resources */,
+				14CEB050101099AE00025F41 /* SearchEntryView.xib in Resources */,
+				14CEB053101099BA00025F41 /* Status.xib in Resources */,
+				140909C01014133A000D9121 /* notice.txt in Resources */,
+				146CABFB105D51F6003D2E99 /* ErrorView.xib in Resources */,
+				14E5E0A410852DE1007C241E /* About.xib in Resources */,
+				141887DA1132143D00A8ED15 /* Three20.bundle in Resources */,
+				14F83C89113723340096DE57 /* aboutGoogle.png in Resources */,
+				14F83C8A113723340096DE57 /* accountsConfigIcon.png in Resources */,
+				14F83C8B113723340096DE57 /* accountTypeIconGmail.png in Resources */,
+				14F83C8C113723340096DE57 /* accountTypeIconImap.png in Resources */,
+				14F83C8D113723340096DE57 /* accountTypeIconRackspace.png in Resources */,
+				14F83C8E113723340096DE57 /* attachment.png in Resources */,
+				14F83C8F113723340096DE57 /* checkbox.png in Resources */,
+				14F83C90113723340096DE57 /* checkboxChecked.png in Resources */,
+				14F83C91113723340096DE57 /* collapseButton.png in Resources */,
+				14F83C92113723340096DE57 /* convoMe.png in Resources */,
+				14F83C93113723340096DE57 /* convoPerson1.png in Resources */,
+				14F83C94113723340096DE57 /* convoPerson2.png in Resources */,
+				14F83C95113723340096DE57 /* convoPerson3.png in Resources */,
+				14F83C96113723340096DE57 /* convoPerson4.png in Resources */,
+				14F83C97113723340096DE57 /* convoPerson5.png in Resources */,
+				14F83C98113723340096DE57 /* convoPerson6.png in Resources */,
+				14F83C99113723340096DE57 /* convoPerson7.png in Resources */,
+				14F83C9A113723340096DE57 /* convoPerson8.png in Resources */,
+				14F83C9B113723340096DE57 /* convoPerson9.png in Resources */,
+				14F83C9C113723340096DE57 /* copyModeOff.png in Resources */,
+				14F83C9D113723340096DE57 /* copyModeOn.png in Resources */,
+				14F83C9E113723340096DE57 /* Default.png in Resources */,
+				14F83C9F113723340096DE57 /* errorBtnBgError.png in Resources */,
+				14F83CA0113723340096DE57 /* errorDetailLink.png in Resources */,
+				14F83CA1113723340096DE57 /* featureIconRM_IMAP.png in Resources */,
+				14F83CA2113723340096DE57 /* featureIconRM_NOADS.png in Resources */,
+				14F83CA3113723340096DE57 /* featureIconRM_RACKSPACE.png in Resources */,
+				14F83CA4113723340096DE57 /* featureRM_IMAP.png in Resources */,
+				14F83CA5113723340096DE57 /* featureRM_NOADS.png in Resources */,
+				14F83CA6113723340096DE57 /* featureRM_RACKSPACE.png in Resources */,
+				14F83CA7113723340096DE57 /* folderIcon.png in Resources */,
+				14F83CA8113723340096DE57 /* foldersAll.png in Resources */,
+				14F83CA9113723340096DE57 /* forwardedArrow.png in Resources */,
+				14F83CAA113723340096DE57 /* homeBg.png in Resources */,
+				14F83CAB113723340096DE57 /* homeBgA.png in Resources */,
+				14F83CAC113723340096DE57 /* homeBgNoLogo.png in Resources */,
+				14F83CAD113723340096DE57 /* homeBtnFolders.png in Resources */,
+				14F83CAE113723340096DE57 /* homeBtnInbox.png in Resources */,
+				14F83CAF113723340096DE57 /* homeBtnSearch.png in Resources */,
+				14F83CB0113723340096DE57 /* homeBtnSettings.png in Resources */,
+				14F83CB1113723340096DE57 /* homeBtnSettingsBack.png in Resources */,
+				14F83CB2113723340096DE57 /* homeDFoldersA.png in Resources */,
+				14F83CB3113723340096DE57 /* homeDFoldersH.png in Resources */,
+				14F83CB4113723340096DE57 /* homeDSearchA.png in Resources */,
+				14F83CB5113723340096DE57 /* homeDSearchH.png in Resources */,
+				14F83CB6113723340096DE57 /* homeDSettingsA.png in Resources */,
+				14F83CB7113723340096DE57 /* homeDSettingsH.png in Resources */,
+				14F83CB8113723340096DE57 /* homeDUsageA.png in Resources */,
+				14F83CB9113723340096DE57 /* homeDUsageH.png in Resources */,
+				14F83CBA113723340096DE57 /* homeFFoldersA.png in Resources */,
+				14F83CBB113723340096DE57 /* homeFFoldersH.png in Resources */,
+				14F83CBC113723340096DE57 /* homeFoldersA.png in Resources */,
+				14F83CBD113723340096DE57 /* homeFoldersH.png in Resources */,
+				14F83CBE113723340096DE57 /* homeFSearchA.png in Resources */,
+				14F83CBF113723340096DE57 /* homeFSearchH.png in Resources */,
+				14F83CC0113723340096DE57 /* homeFSettingsA.png in Resources */,
+				14F83CC1113723340096DE57 /* homeFSettingsH.png in Resources */,
+				14F83CC2113723340096DE57 /* homeSearchA.png in Resources */,
+				14F83CC3113723340096DE57 /* homeSearchH.png in Resources */,
+				14F83CC4113723340096DE57 /* homeSettingsA.png in Resources */,
+				14F83CC5113723340096DE57 /* homeSettingsH.png in Resources */,
+				14F83CC6113723340096DE57 /* homeUsageA.png in Resources */,
+				14F83CC7113723340096DE57 /* homeUsageH.png in Resources */,
+				14F83CC8113723340096DE57 /* icon.png in Resources */,
+				14F83CC9113723340096DE57 /* iconPurchased.png in Resources */,
+				14F83CCA113723340096DE57 /* introDownload.png in Resources */,
+				14F83CCB113723340096DE57 /* introImap.png in Resources */,
+				14F83CCC113723340096DE57 /* introResume.png in Resources */,
+				14F83CCD113723340096DE57 /* introWifi.png in Resources */,
+				14F83CCE113723340096DE57 /* moreResults.png in Resources */,
+				14F83CCF113723340096DE57 /* plainBg.png in Resources */,
+				14F83CD0113723340096DE57 /* pushIcon.png in Resources */,
+				14F83CD1113723340096DE57 /* ranksNoTHighlight.png in Resources */,
+				14F83CD2113723340096DE57 /* ranksNoTrophy.png in Resources */,
+				14F83CD3113723340096DE57 /* ranksTrophy.png in Resources */,
+				14F83CD4113723340096DE57 /* reMailAppIcon.png in Resources */,
+				14F83CD5113723340096DE57 /* reMailAppIconElite.png in Resources */,
+				14F83CD6113723340096DE57 /* reMailAppIconGmail.png in Resources */,
+				14F83CD7113723340096DE57 /* reMailAppIconGold.png in Resources */,
+				14F83CD8113723340096DE57 /* remailTextTrans.png in Resources */,
+				14F83CD9113723340096DE57 /* repliedArrow.png in Resources */,
+				14F83CDA113723340096DE57 /* settingsAboutRemail.png in Resources */,
+				14F83CDB113723340096DE57 /* settingsAccountGmailIcon.png in Resources */,
+				14F83CDC113723340096DE57 /* settingsAccountImapIcon.png in Resources */,
+				14F83CDD113723340096DE57 /* settingsAccountRackspaceIcon.png in Resources */,
+				14F83CDE113723340096DE57 /* settingsAddAccountIcon.png in Resources */,
+				14F83CDF113723340096DE57 /* settingsLoveRemail.png in Resources */,
+				14F83CE0113723340096DE57 /* settingsPinCodeIcon.png in Resources */,
+				14F83CE1113723340096DE57 /* settingsSupport.png in Resources */,
+				14F83CE2113723340096DE57 /* statusBgNoLogo.png in Resources */,
+				14F83CE3113723340096DE57 /* statusButton.png in Resources */,
+				14F83CE4113723340096DE57 /* t.png in Resources */,
+				14F83CE5113723340096DE57 /* textSearch.png in Resources */,
+				14F83CE6113723340096DE57 /* toIndicator.png in Resources */,
+				14F83CE7113723340096DE57 /* toolbarSettings.png in Resources */,
+				14F83CE8113723340096DE57 /* unreadIndicator.png in Resources */,
+				14F83CE9113723340096DE57 /* usageIcon.png in Resources */,
+				14F83D1B113725E50096DE57 /* Attachment.xib in Resources */,
+				14F83D1C113725E50096DE57 /* AutocompleteCell.xib in Resources */,
+				14F83D1E113725E50096DE57 /* FlexiConfig.xib in Resources */,
+				14F83D1F113725E50096DE57 /* FolderList.xib in Resources */,
+				14F83D20113725E50096DE57 /* FolderSelect.xib in Resources */,
+				14F83D21113725E50096DE57 /* LoadingCell.xib in Resources */,
+				14F83D22113725E50096DE57 /* LoveRemail.xib in Resources */,
+				14F83D23113725E50096DE57 /* MailboxView.xib in Resources */,
+				14F83D24113725E50096DE57 /* MailCell.xib in Resources */,
+				14F83D25113725E50096DE57 /* MailItemCell.xib in Resources */,
+				14F83D26113725E50096DE57 /* Person.xib in Resources */,
+				14F83D27113725E50096DE57 /* ProgressView.xib in Resources */,
+				14F83D28113725E50096DE57 /* PushSetup.xib in Resources */,
+				14F83D29113725E50096DE57 /* RootWindow.xib in Resources */,
+				14F83D2A113725E50096DE57 /* SearchResults.xib in Resources */,
+				14F83D2B113725E50096DE57 /* SettingsList.xib in Resources */,
+				14F83D2C113725E50096DE57 /* Store.xib in Resources */,
+				14F83D2D113725E50096DE57 /* StoreItem.xib in Resources */,
+				14F83D2E113725E50096DE57 /* StoreItemCell.xib in Resources */,
+				14F83D2F113725E50096DE57 /* Upsell.xib in Resources */,
+				14F83D30113725E50096DE57 /* Usage.xib in Resources */,
+				14F83D31113725E50096DE57 /* WebView.xib in Resources */,
+				14F8432411372EF30096DE57 /* aboutGabor.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14C4C8BF0F2538AE00BFFF6B /* Email.m in Sources */,
+				14C4C9520F253DB100BFFF6B /* MailboxViewController.m in Sources */,
+				14C4C9530F253DB100BFFF6B /* MailViewController.m in Sources */,
+				14C4C9540F253DB100BFFF6B /* SearchEntryViewController.m in Sources */,
+				14C4C9550F253DB100BFFF6B /* SearchResultsViewController.m in Sources */,
+				140382800F296B6900531DB7 /* HomeViewController.m in Sources */,
+				147BBF2C0F38DB1800345343 /* AppSettings.m in Sources */,
+				1481105A0F410F13000E3CBD /* ReMailAppDelegate.m in Sources */,
+				146D1B210F4568BE005439E5 /* ActivityIndicator.m in Sources */,
+				20DB96D40F5CBA1C0015FE73 /* Reachability.m in Sources */,
+				141E29690FE7520F007D6EB4 /* PastQuery.m in Sources */,
+				14E64AB30FEB26B6000A0962 /* LoadingCell.m in Sources */,
+				14E64AF80FEB29E3000A0962 /* MailCell.m in Sources */,
+				14BF0A330FF017CE00A092C5 /* ContactName.m in Sources */,
+				14D96BF30FF4362C008F3BCC /* CTCoreMessage+ReMail.m in Sources */,
+				14D96E120FF5B0B4008F3BCC /* IntroViewController.m in Sources */,
+				14D96EED0FF6E990008F3BCC /* StatusViewController.m in Sources */,
+				148938560FF9A9AA00AFAD05 /* UidEntry.m in Sources */,
+				14E95474104484C8006ABA93 /* WebViewController.m in Sources */,
+				14F83D02113725450096DE57 /* sqlite3.c in Sources */,
+				14F83D46113726E60096DE57 /* BuchheitTimer.m in Sources */,
+				14F83D47113726E60096DE57 /* DateUtil.m in Sources */,
+				14F83D48113726E60096DE57 /* main.m in Sources */,
+				14F83D49113726E60096DE57 /* StringUtil.m in Sources */,
+				14F842BB113727AF0096DE57 /* AddEmailDBAccessor.m in Sources */,
+				14F842BC113727AF0096DE57 /* ContactDBAccessor.m in Sources */,
+				14F842BD113727AF0096DE57 /* GlobalDBFunctions.m in Sources */,
+				14F842BE113727AF0096DE57 /* LoadEmailDBAccessor.m in Sources */,
+				14F842BF113727AF0096DE57 /* SearchEmailDBAccessor.m in Sources */,
+				14F842C0113727AF0096DE57 /* UidDBAccessor.m in Sources */,
+				14F842E1113728830096DE57 /* AboutViewController.m in Sources */,
+				14F842E2113728830096DE57 /* AccountTypeSelectViewController.m in Sources */,
+				14F842E3113728830096DE57 /* AttachmentViewController.m in Sources */,
+				14F842E4113728830096DE57 /* AutocompleteCell.m in Sources */,
+				14F842E5113728830096DE57 /* ErrorViewController.m in Sources */,
+				14F842E6113728830096DE57 /* FlexiConfigViewController.m in Sources */,
+				14F842E7113728830096DE57 /* FolderListViewController.m in Sources */,
+				14F842E8113728830096DE57 /* FolderSelectViewController.m in Sources */,
+				14F842E9113728830096DE57 /* GmailConfigViewController.m in Sources */,
+				14F842EA113728830096DE57 /* ImapConfigViewController.m in Sources */,
+				14F842EB113728830096DE57 /* MailItemCell.m in Sources */,
+				14F842EC113728830096DE57 /* ProgressView.m in Sources */,
+				14F842ED113728830096DE57 /* PushSetupViewController.m in Sources */,
+				14F842EE113728830096DE57 /* SettingsListViewController.m in Sources */,
+				14F842EF113728830096DE57 /* UpsellViewController.m in Sources */,
+				14F842F0113728830096DE57 /* UsageViewController.m in Sources */,
+				14F842F911372B6E0096DE57 /* StoreItemCell.m in Sources */,
+				14F842FA11372B6E0096DE57 /* StoreItemViewController.m in Sources */,
+				14F842FB11372B6E0096DE57 /* StoreObserver.m in Sources */,
+				14F842FC11372B6E0096DE57 /* StoreViewController.m in Sources */,
+				14F842FF11372BB40096DE57 /* SearchRunner.m in Sources */,
+				14F8430A11372C340096DE57 /* AttachmentDownloader.m in Sources */,
+				14F8430B11372C340096DE57 /* EmailProcessor.m in Sources */,
+				14F8430C11372C340096DE57 /* ImapFolderWorker.m in Sources */,
+				14F8430D11372C340096DE57 /* ImapSync.m in Sources */,
+				14F8430E11372C340096DE57 /* SyncManager.m in Sources */,
+				14F8431B11372CE00096DE57 /* NSObject+SBJSON.m in Sources */,
+				14F8431C11372CE00096DE57 /* NSString+SBJSON.m in Sources */,
+				14F8431D11372CE00096DE57 /* SBJSON.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		141887D71132141600A8ED15 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Three20;
+			targetProxy = 141887D61132141600A8ED15 /* PBXContainerItemProxy */;
+		};
+		F8618DDC10DAE4B800C41188 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "MailCore iPhone";
+			targetProxy = F8618DDB10DAE4B800C41188 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		146CABFA105D51F6003D2E99 /* ErrorView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1468BBF3104E06770022BE89 /* English */,
+				146CAC00105D523E003D2E99 /* German */,
+				146CAC92105D64DF003D2E99 /* French */,
+			);
+			name = ErrorView.xib;
+			sourceTree = "<group>";
+		};
+		14CEB02E1010987500025F41 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14CEB02C1010986A00025F41 /* English */,
+				14CEB056101099D700025F41 /* German */,
+				146CAC77105D60FC003D2E99 /* French */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		14CEB03E1010994D00025F41 /* AccountTypeSelect.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14CEB0301010994700025F41 /* English */,
+				14D09BC710B22EFE0003F006 /* German */,
+				14D09BC810B22F020003F006 /* French */,
+			);
+			name = AccountTypeSelect.xib;
+			sourceTree = "<group>";
+		};
+		14CEB0431010997400025F41 /* GmailConfig.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14CEB0311010994700025F41 /* English */,
+				14073E4E106DAB97007E1DE5 /* German */,
+				14073E4F106DABA4007E1DE5 /* French */,
+			);
+			name = GmailConfig.xib;
+			sourceTree = "<group>";
+		};
+		14CEB0461010998400025F41 /* HomeView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14CEB0321010994700025F41 /* English */,
+				146B47E210831E410047A0BF /* German */,
+				14E5DF6110851B43007C241E /* French */,
+			);
+			name = HomeView.xib;
+			sourceTree = "<group>";
+		};
+		14CEB0491010999200025F41 /* ImapConfig.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14CEB0331010994700025F41 /* English */,
+				14CEB04B1010999A00025F41 /* German */,
+				146CACAA105D6774003D2E99 /* French */,
+			);
+			name = ImapConfig.xib;
+			sourceTree = "<group>";
+		};
+		14CEB04C101099A200025F41 /* Intro.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14CEB0341010994700025F41 /* English */,
+				14CEB04E101099A800025F41 /* German */,
+				146CACBA105D695B003D2E99 /* French */,
+			);
+			name = Intro.xib;
+			sourceTree = "<group>";
+		};
+		14CEB04F101099AE00025F41 /* SearchEntryView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14CEB0351010994700025F41 /* English */,
+				14CEB051101099B300025F41 /* German */,
+				146CACBE105D6A02003D2E99 /* French */,
+			);
+			name = SearchEntryView.xib;
+			sourceTree = "<group>";
+		};
+		14CEB052101099BA00025F41 /* Status.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14CEB0361010994700025F41 /* English */,
+				14CEB054101099C300025F41 /* German */,
+				146CACC2105D6A30003D2E99 /* French */,
+			);
+			name = Status.xib;
+			sourceTree = "<group>";
+		};
+		14E5E0A310852DE1007C241E /* About.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				146B46951082D83A0047A0BF /* English */,
+			);
+			name = About.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1451CEF20F698428007AF1C6 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_ENTITLEMENTS = dist.plist;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: NextMail Corp.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: NextMail Corp.";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../three20/src/;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphonesimulator3.0;
+			};
+			name = Distribution;
+		};
+		1451CEF30F698428007AF1C6 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_ENTITLEMENTS = dist.plist;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: NextMail Corp.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: NextMail Corp.";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ReMailIPhone_Prefix.pch;
+				HEADER_SEARCH_PATHS = (
+					"../mailcore/Source/**",
+					"\"$(SRCROOT)/binaries/$(SDKROOT)/$(CONFIGURATION)/include\"",
+					"../three20/src//**",
+					"../mailcore/libetpan/build-mac/include/**",
+				);
+				INFOPLIST_FILE = Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/binaries/$(SDKROOT)/$(CONFIGURATION)/lib\"",
+					"$(inherited)",
+					"\"$(SRCROOT)/binaries/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/Debug/lib\"",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../mailcore/libetpan/binaries/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/Release/lib\"",
+				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = reMail;
+				SDKROOT = iphonesimulator3.0;
+			};
+			name = Distribution;
+		};
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: NextMail Corp.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: NextMail Corp.";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ReMailIPhone_Prefix.pch;
+				HEADER_SEARCH_PATHS = (
+					"../mailcore/Source/**",
+					"\"$(SRCROOT)/binaries/$(SDKROOT)/$(CONFIGURATION)/include\"",
+					"../three20/src//**",
+					"../mailcore/libetpan/build-mac/include/**",
+				);
+				INFOPLIST_FILE = Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/binaries/$(SDKROOT)/$(CONFIGURATION)/lib\"",
+					"$(inherited)",
+					"\"$(SRCROOT)/binaries/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/Debug/lib\"",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../mailcore/libetpan/binaries/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/Debug/lib\"",
+					"\"$(SRCROOT)/../mailcore/libetpan/binaries/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/Release/lib\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = reMail;
+				SDKROOT = iphonesimulator3.0;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: NextMail Corp.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: NextMail Corp.";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ReMailIPhone_Prefix.pch;
+				HEADER_SEARCH_PATHS = (
+					"../mailcore/Source/**",
+					"\"$(SRCROOT)/binaries/$(SDKROOT)/$(CONFIGURATION)/include\"",
+					"../three20/src//**",
+					"../mailcore/libetpan/build-mac/include/**",
+				);
+				INFOPLIST_FILE = Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/binaries/$(SDKROOT)/$(CONFIGURATION)/lib\"",
+					"$(inherited)",
+					"\"$(SRCROOT)/binaries/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/Debug/lib\"",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../mailcore/libetpan/binaries/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/Debug/lib\"",
+					"\"$(SRCROOT)/../mailcore/libetpan/binaries/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/Release/lib\"",
+				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = reMail;
+				SDKROOT = iphonesimulator3.0;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: NextMail Corp.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: NextMail Corp.";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../three20/src/;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphonesimulator3.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: NextMail Corp.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: NextMail Corp.";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../three20/src/;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphonesimulator3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "ReMail" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+				1451CEF30F698428007AF1C6 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "ReMailIPhone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+				1451CEF20F698428007AF1C6 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

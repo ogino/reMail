@@ -1,0 +1,87 @@
+1 - HOWTO COMPILE ALL LIBS AND RUN THE TEST PROGRAM
+====================================================
+
+1.1) sh build-all-deps.sh `pwd`/binaries 
+
+    It will take about an hour to compile both libraries for the iPhoneOS and 
+    iPhoneSimulator, Debug and Release, for the 3.0 SDK using GCC 4.2.
+
+    If you want to use any other SDK change the SDKLIST variable in the 
+    build-all-deps.sh script.
+
+    For ex.:
+      SDKLIST="2.2.1 3.0"
+
+1.2) Open the ImapClient3.0.xcodeprj and run it.
+
+    Note that XCode will look for openssl, cyrus-sasl and libetpan in the 
+    binaries/ subdir of the current directory; we built that dir in the 
+    step 1.1).
+
+2 - HOW TO ADD MAILCORE AND ITS DEPENDENCIES TO YOUR PROJECT
+=============================================================
+  
+2.1) First of all compile MailCore dependecies following the step 1.1
+
+     To integrate MailCore in your project you've to import MailCore source 
+     files, import static libraries and change the search path for both 
+     Headers and Libraries in your target configuration.
+
+2.2) Import MailCore files 
+    
+     Open the package folder in Finder and drag the MailCore directory
+     over the "Classes" item in the Groups & Files pane of XCode.
+
+     On the import dialog check the "Copy items into destination..." checkbox.
+
+2.3) Import the static libs
+
+     Open the package folder in Finder, find the following libs and 
+     drag them in the Frameworks item in Groups & Files:
+
+        libetpan.a
+        libcrypto.a
+        libssl.a
+        libsasl2.a
+
+     Any version of those lib will do, we'll tell XCode how to find the right
+     one (i.e. those based on the selected SDK and Configuration) in the next 
+     step.
+
+     In the import dialog do NOT check the "Copy item into destination...".
+
+     For example you can import libs from:
+
+        ${BINARIES}/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/Release/lib/
+
+    The BINARIES var here is the installation directory given to the script in 
+    the step 1.1.
+
+2.4) Change the search paths of libs and headers
+
+     CTRL-click on your project under the Target item in the Groups & Files 
+     pane and choose "Get Info".
+
+     Select the Build tab on the top bar.
+
+     Find the Header Search Paths variable and set to:
+
+        "PATH_TO_YOUR_BINARIES_DIR_HERE/$(SDKROOT)/$(CONFIGURATION)/include"
+
+     Find the Library Search Paths variable and set to:
+
+        "PATH_TO_YOUR_BINARIES_DIR_HERE/$(SDKROOT)/$(CONFIGURATION)/lib"
+
+2.5) Link to libiconv library (provided by Apple)
+
+     CTRL-click on your project under the Target item in the Groups & Files 
+
+     Select the "General" tab.
+
+     In the Linked Libraries section at the bottom of the window click on the
+     "+" button.
+
+     Select "Dylibs" in the combo box and click on 
+
+        libiconv.dylib
+
