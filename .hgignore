@@ -5,6 +5,8 @@ syntax:glob
 *.pbxuser
 
 # Random stuff
+\#*
+\._*
 *~
 .DS_Store
 

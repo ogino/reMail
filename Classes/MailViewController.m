@@ -1,6 +1,6 @@
 //
 //  MailViewController.m
-//  NextMailIPhone
+//  ReMailIPhone
 //
 //  Created by Gabor Cselle on 1/13/09.
 //  Copyright 2010 Google Inc.
