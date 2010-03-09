@@ -65,17 +65,6 @@
 			struct timeval after_delay = {  15, 0 };
 			mailstream_network_delay = after_delay; // reset to the standard one so we can know when our connection gets interrupted
 		} @catch (NSException *exp) {
-			NSString* lastResponse = @"";
-			NSString* lastResponse2 = @"";
-			
-			// these are calls I hacked into libetpan to get me the connect messages from the server
-			if(gabor_imap_login_response_1_ret() != nil) {
-				lastResponse = [NSString stringWithCString:gabor_imap_login_response_1_ret() encoding:NSASCIIStringEncoding];
-			}
-			if(gabor_imap_login_response_2_ret() != nil) {
-				lastResponse2 = [NSString stringWithCString:gabor_imap_login_response_2_ret() encoding:NSASCIIStringEncoding];
-			}
-			
 			NSLog(@"Connect: %@", [ImapFolderWorker decodeError:exp]);
 			
 			NSString* error = [NSString stringWithFormat:NSLocalizedString(@"Connect: %@", nil), [ImapFolderWorker decodeError:exp]];
@@ -85,7 +74,7 @@
 				error = NSLocalizedString(@"Invalid login. Fix in Home>Settings", nil);
 			}
 					  
-			[sm syncAborted:error detail:[NSString stringWithFormat:@"Login response: %@|\n%@|\n%@|\n%@", exp, [ImapFolderWorker decodeError:exp], lastResponse, lastResponse2]];
+			[sm syncAborted:error detail:[NSString stringWithFormat:@"Login response: %@|\n%@", exp, [ImapFolderWorker decodeError:exp]]];
 			return; 
 		}
 		
