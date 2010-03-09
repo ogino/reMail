@@ -1500,9 +1500,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(SRCROOT)/binaries/$(SDKROOT)/$(CONFIGURATION)/lib\"",
 					"$(inherited)",
-					"\"$(SRCROOT)/binaries/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/Debug/lib\"",
-					"\"$(SRCROOT)\"",
-					"\"$(SRCROOT)/../mailcore/libetpan/binaries/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/Release/lib\"",
+					"$(SRCROOT)",
+					"\"$(SRCROOT)/../mailcore/libetpan/binaries/$(SDKROOT)/Release/lib\"",
 				);
 				OTHER_LDFLAGS = (
 					"-all_load",
@@ -1538,10 +1537,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(SRCROOT)/binaries/$(SDKROOT)/$(CONFIGURATION)/lib\"",
 					"$(inherited)",
-					"\"$(SRCROOT)/binaries/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/Debug/lib\"",
 					"\"$(SRCROOT)\"",
-					"\"$(SRCROOT)/../mailcore/libetpan/binaries/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/Debug/lib\"",
-					"\"$(SRCROOT)/../mailcore/libetpan/binaries/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/Release/lib\"",
+					"\"$(SRCROOT)/../mailcore/libetpan/binaries/$(SDKROOT)/$(CONFIGURATION)/lib\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = reMail;
@@ -1572,10 +1569,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(SRCROOT)/binaries/$(SDKROOT)/$(CONFIGURATION)/lib\"",
 					"$(inherited)",
-					"\"$(SRCROOT)/binaries/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/Debug/lib\"",
 					"\"$(SRCROOT)\"",
-					"\"$(SRCROOT)/../mailcore/libetpan/binaries/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/Debug/lib\"",
-					"\"$(SRCROOT)/../mailcore/libetpan/binaries/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/Release/lib\"",
+					"\"$(SRCROOT)/../mailcore/libetpan/binaries/$(SDKROOT)/$(CONFIGURATION)/lib\"",
 				);
 				OTHER_LDFLAGS = (
 					"-all_load",
