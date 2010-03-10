@@ -82,10 +82,10 @@
 "Scanning messages in %@" = "Scanne Nachrichten in %@";
 //TODO(you): change this to your support email address
 "Email that caused error:\nSubject: %@\nSender: %@\nDate: %@\nUDID: %@\nSeq/Start/End/Total/New:%i/%i/%i/%i/%i.\n\nWays to fix this:\n1. Try syncing again :-)\n2. Hit Skip button below\n3. Delete this email or move it to a location that isn't downloaded by reMail.\n4. Copy and email error to support@yourcompany.com" =
- "Email mit Fehler:\Betreff: %@\nSender: %@\nDatum: %@\nUDID: %@\nSeq/Start/End/Total/New:%i/%i/%i/%i/%i.\n\nLösungsmöglichkeiten:\n1. Versuchen Sie einfach nochmal zu syncen :-)\n2. Email mit dem Button auf dieser Seite überspringen \n3. Betroffene Email löschen in einen Ordner verschieben, den reMail nicht herunterlädt\n4. Schicken Sie diese Fehlermeldung an support@remail.com";
+ "Email mit Fehler:\Betreff: %@\nSender: %@\nDatum: %@\nUDID: %@\nSeq/Start/End/Total/New:%i/%i/%i/%i/%i.\n\nLösungsmöglichkeiten:\n1. Versuchen Sie einfach nochmal zu syncen :-)\n2. Email mit dem Button auf dieser Seite überspringen \n3. Betroffene Email löschen in einen Ordner verschieben, den reMail nicht herunterlädt\n4. Schicken Sie diese Fehlermeldung an support@yourcompany.com";
 
 //TODO(you): change this to your support email address
-"Ways to fix this:\n1. Try syncing again\n2. Copy and email these details for support@remail.com:\n|%i|%@|%@|" = 
+"Ways to fix this:\n1. Try syncing again\n2. Copy and email these details for support@yourcompany.com:\n|%i|%@|%@|" = 
  "Lösungsmöglichkeiten:\n1. Versuchen Sie einfach nochmal zu syncen :-)\n2. Schicken Sie diese Fehlermeldung an support@yourcompany.com:\n|%i|%@|%@|";
 
 

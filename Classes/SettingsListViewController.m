@@ -245,7 +245,7 @@
 				NSString* body = [NSString stringWithFormat:@"(Your Feedback here)\n\n\nUDID: %@", [AppSettings udid]];
 				
 				//TODO(you): change this to your support email address
-				[mailCtrl setToRecipients:[NSArray arrayWithObject:@"support@remail.com"]];
+				[mailCtrl setToRecipients:[NSArray arrayWithObject:@"support@yourcompany.com"]];
 				[mailCtrl setMessageBody:body isHTML:NO];
 				[mailCtrl setSubject:@"reMail Feedback"];
 				

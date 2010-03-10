@@ -86,7 +86,7 @@
 	NSString* body = [NSString stringWithFormat:@"Error:\n\n%@", self.detailText];
 	[mailCtrl setMessageBody:body isHTML:NO];
 	//TODO(you): change this to your support email address
-	[mailCtrl setToRecipients:[NSArray arrayWithObject:@"support@yourcompanyname.com"]];
+	[mailCtrl setToRecipients:[NSArray arrayWithObject:@"support@yourcompany.com"]];
 	
 	[self presentModalViewController:mailCtrl animated:YES];
 	[mailCtrl release];

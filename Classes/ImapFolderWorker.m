@@ -563,7 +563,7 @@
 				return YES; // keep on ploughing with the sync
 			} else {
 				[sm syncAborted:[NSString stringWithFormat:NSLocalizedString(@"Fetch error at %i: %@", nil), startSeq, [ImapFolderWorker decodeError:exp]] 
-						 detail:[NSString stringWithFormat:NSLocalizedString(@"Ways to fix this:\n1. Try syncing again\n2. Copy and email these details for support@remail.com:\n|%i|%@|%@\nUDID: %@\nSeq/Start/End/Total/New:%i/%i/%i/%i", nil), 
+						 detail:[NSString stringWithFormat:NSLocalizedString(@"Ways to fix this:\n1. Try syncing again\n2. Copy and email these details for support@yourcompany.com:\n|%i|%@|%@\nUDID: %@\nSeq/Start/End/Total/New:%i/%i/%i/%i", nil), 
 								 [ImapFolderWorker numberFromError:exp], [ImapFolderWorker decodeError:exp], [self lastResponse], [AppSettings udid], startSeq, endSeq, progressTotal, (int)syncingNew] 
 					 accountNum:self.accountNum  folderNum:self.folderNum startSeq:start];
 				return NO;
@@ -674,7 +674,7 @@
 					}
 					continue;
 				} else {
-					NSString* detail = [NSString stringWithFormat:NSLocalizedString(@"Email that caused error:\nSubject: %@\nSender: %@\nDate: %@\nUDID: %@\nSeq/Start/End/Total/New/E:%i/%i/%i/%i/%i/%@.\n\nWays to fix this:\n1. Try syncing again :-)\n2. Hit Skip button below\n3. Delete this email or move it to a location that isn't downloaded by reMail.\n4. Copy and email error to support@remail.com", nil), 
+					NSString* detail = [NSString stringWithFormat:NSLocalizedString(@"Email that caused error:\nSubject: %@\nSender: %@\nDate: %@\nUDID: %@\nSeq/Start/End/Total/New/E:%i/%i/%i/%i/%i/%@.\n\nWays to fix this:\n1. Try syncing again :-)\n2. Hit Skip button below\n3. Delete this email or move it to a location that isn't downloaded by reMail.\n4. Copy and email error to support@yourcompany.com", nil), 
 										subject, senderAddress, date, [AppSettings udid], seqNum, startSeq, endSeq, progressTotal, (int)syncingNew, [ImapFolderWorker decodeError:exp]];
 					[sm syncAborted:[NSString stringWithFormat:NSLocalizedString(@"Error fetching message %i: %@", nil), seqNum, [ImapFolderWorker decodeError:exp]] detail:detail 
 						 accountNum:self.accountNum  folderNum:self.folderNum startSeq:start];
