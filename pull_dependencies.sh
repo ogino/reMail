@@ -18,7 +18,7 @@ sh build-all-deps.sh `pwd`/binaries
 
 # copy crypto libs into the right place (Mailcore subdirectory)
 mkdir -p ../../mailcore/libetpan/binaries
-cp -r binaries/Developer ../../mailcore/libetpan/binaries/Developer
+cp -R binaries/Developer ../../mailcore/libetpan/binaries/Developer
 
 # libetpan needs openssl / cyrus-sasl to build correctly on iPhone 3.1+
 cp -r -v binaries/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/Debug/include/* ../../mailcore/libetpan/build-mac/include/.
