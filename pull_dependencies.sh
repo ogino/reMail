@@ -14,6 +14,8 @@ hg clone http://bitbucket.org/mronge/mailcore/
 # compile crypto libs (cyrus-sasl, openssl)
 cd -
 cd build-crypto-deps
+# set path - in some screwed-up configs, this is missing
+export PATH=$PATH:/Developer/usr/bin
 sh build-all-deps.sh `pwd`/binaries
 
 # copy crypto libs into the right place (Mailcore subdirectory)
