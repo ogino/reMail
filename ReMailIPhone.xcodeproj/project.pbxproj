@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14019B9D10DC26850000859B /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14019B9C10DC26850000859B /* libssl.a */; };
 		14019B9F10DC26940000859B /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14019B9E10DC26940000859B /* libcrypto.a */; };
 		14019BA110DC26A40000859B /* libsasl2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14019BA010DC26A40000859B /* libsasl2.a */; };
 		140382800F296B6900531DB7 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1403827F0F296B6900531DB7 /* HomeViewController.m */; };
@@ -23,6 +22,7 @@
 		147BBF2C0F38DB1800345343 /* AppSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 147BBF2B0F38DB1800345343 /* AppSettings.m */; };
 		1481105A0F410F13000E3CBD /* ReMailAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 148110590F410F13000E3CBD /* ReMailAppDelegate.m */; };
 		148938560FF9A9AA00AFAD05 /* UidEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 148938550FF9A9AA00AFAD05 /* UidEntry.m */; };
+		14B0AC8C115484D000944873 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B0AC8B115484D000944873 /* libssl.a */; };
 		14BF0A330FF017CE00A092C5 /* ContactName.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BF0A320FF017CE00A092C5 /* ContactName.m */; };
 		14C4C8BF0F2538AE00BFFF6B /* Email.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C4C8A40F2538AE00BFFF6B /* Email.m */; };
 		14C4C9520F253DB100BFFF6B /* MailboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C4C9410F253DB100BFFF6B /* MailboxViewController.m */; };
@@ -300,7 +300,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		14019B9C10DC26850000859B /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = ../mailcore/libetpan/binaries/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/Release/lib/libssl.a; sourceTree = SOURCE_ROOT; };
 		14019B9E10DC26940000859B /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = ../mailcore/libetpan/binaries/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/Release/lib/libcrypto.a; sourceTree = SOURCE_ROOT; };
 		14019BA010DC26A40000859B /* libsasl2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsasl2.a; path = ../mailcore/libetpan/binaries/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/Release/lib/libsasl2.a; sourceTree = SOURCE_ROOT; };
 		1403827F0F296B6900531DB7 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = Classes/HomeViewController.m; sourceTree = "<group>"; };
@@ -333,6 +332,7 @@
 		148110590F410F13000E3CBD /* ReMailAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReMailAppDelegate.m; path = Classes/ReMailAppDelegate.m; sourceTree = "<group>"; };
 		148938540FF9A9AA00AFAD05 /* UidEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UidEntry.h; sourceTree = "<group>"; };
 		148938550FF9A9AA00AFAD05 /* UidEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UidEntry.m; sourceTree = "<group>"; };
+		14B0AC8B115484D000944873 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = ../mailcore/binaries/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/Debug/lib/libssl.a; sourceTree = SOURCE_ROOT; };
 		14BF0A310FF017CE00A092C5 /* ContactName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactName.h; sourceTree = "<group>"; };
 		14BF0A320FF017CE00A092C5 /* ContactName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactName.m; sourceTree = "<group>"; };
 		14C4C8A30F2538AE00BFFF6B /* Email.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Email.h; sourceTree = "<group>"; };
@@ -606,10 +606,10 @@
 				14DF9DAC105E525000A59D6D /* CoreLocation.framework in Frameworks */,
 				14E5E17510853B58007C241E /* AddressBook.framework in Frameworks */,
 				14D74A1610AB7DD10019FB1F /* StoreKit.framework in Frameworks */,
-				14019B9D10DC26850000859B /* libssl.a in Frameworks */,
 				14019B9F10DC26940000859B /* libcrypto.a in Frameworks */,
 				14019BA110DC26A40000859B /* libsasl2.a in Frameworks */,
 				141887E9113214A400A8ED15 /* libThree20.a in Frameworks */,
+				14B0AC8C115484D000944873 /* libssl.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1015,7 +1015,7 @@
 				14D74A1510AB7DD10019FB1F /* StoreKit.framework */,
 				200437120F5DFFF9007D450A /* SystemConfiguration.framework */,
 				14DF9DAB105E525000A59D6D /* CoreLocation.framework */,
-				14019B9C10DC26850000859B /* libssl.a */,
+				14B0AC8B115484D000944873 /* libssl.a */,
 				142A6C270FF2C8D800BEF19F /* libiconv.2.dylib */,
 				14019BA010DC26A40000859B /* libsasl2.a */,
 				14019B9E10DC26940000859B /* libcrypto.a */,
@@ -1502,6 +1502,7 @@
 					"$(inherited)",
 					"$(SRCROOT)",
 					"\"$(SRCROOT)/../mailcore/libetpan/binaries/$(SDKROOT)/Release/lib\"",
+					"\"$(SRCROOT)/../mailcore/binaries/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/Debug/lib\"",
 				);
 				OTHER_LDFLAGS = (
 					"-all_load",
@@ -1539,6 +1540,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 					"\"$(SRCROOT)/../mailcore/libetpan/binaries/$(SDKROOT)/$(CONFIGURATION)/lib\"",
+					"\"$(SRCROOT)/../mailcore/binaries/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/Debug/lib\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = reMail;
@@ -1571,6 +1573,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 					"\"$(SRCROOT)/../mailcore/libetpan/binaries/$(SDKROOT)/$(CONFIGURATION)/lib\"",
+					"\"$(SRCROOT)/../mailcore/binaries/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/Debug/lib\"",
 				);
 				OTHER_LDFLAGS = (
 					"-all_load",
