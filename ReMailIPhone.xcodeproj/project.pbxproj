@@ -18,6 +18,7 @@
 		1451CEF80F6984EE007AF1C6 /* dist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1451CEF70F6984EE007AF1C6 /* dist.plist */; };
 		146CABFB105D51F6003D2E99 /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 146CABFA105D51F6003D2E99 /* ErrorView.xib */; };
 		146D1B210F4568BE005439E5 /* ActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 146D1B200F4568BE005439E5 /* ActivityIndicator.m */; };
+		147537371155B73A00E1AA38 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 147537361155B73A00E1AA38 /* libcrypto.a */; };
 		147BBE790F38CA0200345343 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 147BBE780F38CA0200345343 /* Settings.bundle */; };
 		147BBF2C0F38DB1800345343 /* AppSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 147BBF2B0F38DB1800345343 /* AppSettings.m */; };
 		1481105A0F410F13000E3CBD /* ReMailAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 148110590F410F13000E3CBD /* ReMailAppDelegate.m */; };
@@ -325,6 +326,7 @@
 		146CACC2105D6A30003D2E99 /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = French.lproj/Status.xib; sourceTree = "<group>"; };
 		146D1B1F0F4568BE005439E5 /* ActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivityIndicator.h; path = Classes/ActivityIndicator.h; sourceTree = "<group>"; };
 		146D1B200F4568BE005439E5 /* ActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivityIndicator.m; path = Classes/ActivityIndicator.m; sourceTree = "<group>"; };
+		147537361155B73A00E1AA38 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = ../mailcore/libetpan/binaries/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/Debug/lib/libcrypto.a; sourceTree = SOURCE_ROOT; };
 		147BBE780F38CA0200345343 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		147BBF2A0F38DB1800345343 /* AppSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppSettings.h; path = Classes/AppSettings.h; sourceTree = "<group>"; };
 		147BBF2B0F38DB1800345343 /* AppSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppSettings.m; path = Classes/AppSettings.m; sourceTree = "<group>"; };
@@ -610,6 +612,7 @@
 				14019BA110DC26A40000859B /* libsasl2.a in Frameworks */,
 				141887E9113214A400A8ED15 /* libThree20.a in Frameworks */,
 				14B0AC8C115484D000944873 /* libssl.a in Frameworks */,
+				147537371155B73A00E1AA38 /* libcrypto.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1019,6 +1022,7 @@
 				142A6C270FF2C8D800BEF19F /* libiconv.2.dylib */,
 				14019BA010DC26A40000859B /* libsasl2.a */,
 				14019B9E10DC26940000859B /* libcrypto.a */,
+				147537361155B73A00E1AA38 /* libcrypto.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1503,6 +1507,7 @@
 					"$(SRCROOT)",
 					"\"$(SRCROOT)/../mailcore/libetpan/binaries/$(SDKROOT)/Release/lib\"",
 					"\"$(SRCROOT)/../mailcore/binaries/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/Debug/lib\"",
+					"\"$(SRCROOT)/../mailcore/libetpan/binaries/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/Debug/lib\"",
 				);
 				OTHER_LDFLAGS = (
 					"-all_load",
@@ -1541,6 +1546,7 @@
 					"\"$(SRCROOT)\"",
 					"\"$(SRCROOT)/../mailcore/libetpan/binaries/$(SDKROOT)/$(CONFIGURATION)/lib\"",
 					"\"$(SRCROOT)/../mailcore/binaries/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/Debug/lib\"",
+					"\"$(SRCROOT)/../mailcore/libetpan/binaries/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/Debug/lib\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = reMail;
@@ -1574,6 +1580,7 @@
 					"\"$(SRCROOT)\"",
 					"\"$(SRCROOT)/../mailcore/libetpan/binaries/$(SDKROOT)/$(CONFIGURATION)/lib\"",
 					"\"$(SRCROOT)/../mailcore/binaries/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/Debug/lib\"",
+					"\"$(SRCROOT)/../mailcore/libetpan/binaries/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/Debug/lib\"",
 				);
 				OTHER_LDFLAGS = (
 					"-all_load",
@@ -1596,7 +1603,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = ../three20/src/;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PREBINDING = NO;
 				SDKROOT = iphonesimulator3.0;
 				STRIP_INSTALLED_PRODUCT = NO;
