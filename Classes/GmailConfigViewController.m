@@ -43,6 +43,7 @@
 @synthesize firstSetup, accountNum, newAccount;
 @synthesize selectFoldersButton;
 @synthesize scrollView;
+@synthesize privacyNotice;
 
 - (void)dealloc {
 	[scrollView release];
@@ -51,6 +52,7 @@
 	[usernameField release];
 	[passwordField release];
 	[selectFoldersButton release];
+	[privacyNotice release];
 	
     [super dealloc];
 }
@@ -64,6 +66,7 @@
 	self.usernameField = nil;
 	self.passwordField = nil;
 	self.selectFoldersButton = nil;
+	self.privacyNotice = nil;
 }
 
 -(void)viewDidLoad {
@@ -82,6 +85,7 @@
 		if([AppSettings password:accountNum] != nil) {
 			self.passwordField.text = [AppSettings password:accountNum];
 		}
+		[self.privacyNotice setHidden:YES];
 	}  else {
 		// if we're adding a new account, we shouldn't show select folders button
 		[self.selectFoldersButton setHidden:YES];	
