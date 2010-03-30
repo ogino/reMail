@@ -29,6 +29,8 @@
 	IBOutlet UITextField* passwordField;
 	IBOutlet UIButton* selectFoldersButton;
 	
+	IBOutlet UILabel* privacyNotice;
+	
 	int accountNum;
 	BOOL newAccount;
 	BOOL firstSetup;
@@ -44,6 +46,7 @@
 @property (nonatomic, retain) IBOutlet UITextField* usernameField;
 @property (nonatomic, retain) IBOutlet UITextField* passwordField;
 @property (nonatomic, retain) IBOutlet UIButton* selectFoldersButton;
+@property (nonatomic, retain) IBOutlet UILabel* privacyNotice;
 @property (assign) int accountNum;
 @property (assign) BOOL newAccount;
 @property (assign) BOOL firstSetup;
