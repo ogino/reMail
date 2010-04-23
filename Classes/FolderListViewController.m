@@ -73,6 +73,7 @@
 			NSMutableDictionary* folderState = [sm retrieveState:j accountNum:i];
 			NSString* folderDisplayName = [folderState objectForKey:@"folderDisplayName"];
 			NSString* folderPath = [folderState objectForKey:@"folderPath"];
+                        NSLog( @"folderPath: %@, folderDisplayName: %@", folderPath, folderDisplayName );
 			if([folderPath isEqualToString:@"$$$$All_Mail$$$$"]) {
 				folderDisplayName = NSLocalizedString(@"All Mail", nil);
 			}

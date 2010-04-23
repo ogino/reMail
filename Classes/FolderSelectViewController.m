@@ -25,6 +25,173 @@
 #import "EmailProcessor.h"
 #import "StringUtil.h"
 
+#define BASE64_UNIT_SIZE 4
+
+//
+// Mapping from ASCII character to 6 bit pattern.
+//
+// The "xx"s in this table are just a #define of 65 (i.e. outside the
+// valid range of Base64) but they provide an interesting visual
+// representation of the 6-bits that each Base64 character can occupy
+// within the 8-bit byte.
+//
+#define xx 65
+static unsigned char base64DecodeLookup[256] =
+{
+  xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, 
+  xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx,
+  xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, 62, xx, xx, xx, 63,  
+  52, 53, 54, 55, 56, 57, 58, 59, 60, 61, xx, xx, xx, xx, xx, xx, 
+  xx,  0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 
+  15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, xx, xx, xx, xx, xx, 
+  xx, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 
+  41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, xx, xx, xx, xx, xx, 
+  xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, 
+  xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, 
+  xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, 
+  xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, 
+  xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, 
+  xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, 
+  xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, 
+  xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, xx, 
+};
+
+size_t addDecodedCharacters(
+  unsigned char *outBuf,
+  size_t to,
+  const unsigned char *accumulated,
+  size_t length
+)
+{
+  // cleared accumulated, so any bytes beyond [i] are 0, and thus safe to include
+  // but we don't want to keep incrementing 'to' if we don't have characters
+  size_t i = to;
+  outBuf[i++] = (accumulated[0] << 2) | (accumulated[1] >> 4);
+  if (length>1) outBuf[i++] = (accumulated[1] << 4) | (accumulated[2] >> 2);
+  if (length>3) outBuf[i++] = (accumulated[2] << 6) | (accumulated[3]);
+  NSLog( @"decoded characters: %x %x %x",
+         (int)outBuf[to],
+         (length>1) ? (int)outBuf[to+1] : ' ',
+         (length>3) ? (int)outBuf[to+2] : ' '
+  );
+  return i - to;
+}
+
+/*
+ * imap uses modified BASE64 encoded UTF-16 strings
+ * network-byte-order (big endian - NSUTF16BigEndianStringEncoding) 
+ * but with ',' instead of '/' and allowing a few more characters
+ * to be un-escaped ("IMAP/modified UTF-7" defined in rfc3501 5.1.3 citing rfc 2152)
+ *
+ * Python code:
+ *   http://www.koders.com/python/fid744B4E448B1689C0963942A7928FA049084FAC86.aspx?s=search
+ *
+ * Perl docs:
+ *    http://search.cpan.org/~pmakholm/Encode-IMAPUTF7-1.04/lib/Encode/IMAPUTF7.pm
+ *
+ * Base64 on mac/iPhone:
+ *    http://cocoawithlove.com/2009/06/base64-encoding-options-on-mac-and.html
+ */
+NSString* imapUTF7Decode(NSString* in)
+{
+  // UTF7 is an all-ASCII format, by design
+  const char *inBuf = [in cStringUsingEncoding: NSASCIIStringEncoding]; 
+  size_t inLength = inBuf ? strlen( inBuf ) : 0;
+  
+  // outBuf needs to be UTF-16 (so twice inLength). actual characters in
+  // outBuf may be shorter than inBuf characters, because of the 4::3 decoding
+  unsigned char *outBuf = (unsigned char*)malloc( 2*inLength );
+  NSString *out;
+
+  unsigned char accumulated[BASE64_UNIT_SIZE]; // block of chars to translate at once
+  unsigned char cur; // most recent BASE64 char to decode
+  unsigned char decode; // decoded single BASE64 char value
+
+  size_t from = 0; // index into inBuf. goes up to inLength
+  size_t to = 0; // index into outBuf. Always less than inLength
+  size_t i = 0; //index into accumulated
+  int accumulating = 0;
+  int timeToAdd = 0;
+
+  if ( !outBuf ) {
+    NSLog( @"Unable to allocate memory for decoded string or unknown encoding of input data: %p:%@", inBuf, in );
+    return in; // best option available?  unique, maybe-recognizable string
+  }
+
+  memset( accumulated, 0, sizeof accumulated );
+  while ( from < inLength ) // could do pointer arithmetic through this...
+  {
+    cur = inBuf[from++];
+    if ( cur == '&' )
+    {
+      accumulating = 1;
+      // don't add this character
+    }
+    else if ( !accumulating )
+    {
+      // not accumulating, just copy the character
+      outBuf[to++] = 0;
+      outBuf[to++] = cur;
+    }
+    else
+    {
+      if ( cur == '-' )
+      {
+        // end of block
+        accumulating = 0;
+        if ( i == 0 ) // only character
+        {
+          outBuf[to++] = 0;
+          outBuf[to++] = '&';
+        }
+        else
+        {
+          timeToAdd = 1;
+        }
+      }
+      else
+      {
+        decode = base64DecodeLookup[cur];
+        if ( decode == xx ) 
+        {
+          // skip over invalid characters, like linefeeds, etc.
+          // needed for general BASE64, but probably not this case
+          NSLog( @"Unexpected character in UTF-7: %c", cur );
+        }
+        else
+        {
+          accumulated[i++] = decode;
+          if ( i >= BASE64_UNIT_SIZE )
+          {
+            timeToAdd = 1;
+          }
+        }
+      }
+      if ( timeToAdd )
+      {
+        timeToAdd = 0;
+        to += addDecodedCharacters( outBuf, to, accumulated, i );
+        memset( accumulated, 0, sizeof accumulated );
+        i = 0;
+      }
+    }
+  }
+
+  if ( accumulating && i )
+  {
+    to += addDecodedCharacters( outBuf, to, accumulated, i );
+  }
+  
+  // if all went well, we now have a UTF16 Big-Endian string.
+  out = [[NSString alloc]
+            initWithBytes: outBuf
+                   length: to
+                 encoding:NSUTF16BigEndianStringEncoding];
+  free( outBuf );
+  
+  return out;
+}
+    
 @implementation FolderSelectViewController
 
 @synthesize utf7Decoder;
@@ -82,22 +249,14 @@
 	if([folderPath isEqualToString:@"INBOX"]) {
 		return @"Inbox"; // TODO(gabor): Localize name
 	}
-	
+
+        NSLog( @"Folder Path: %@", folderPath );
 	if(![StringUtil stringContains:folderPath subString:@"&"]) {
 		return folderPath;
 	}
 	
-	NSString* display = folderPath;
-	for (NSString* from in self.utf7Decoder) {
-		if([StringUtil stringContains:display subString:from]) {
-			NSString* to = [self.utf7Decoder valueForKey:from];
-			display	= [display stringByReplacingOccurrencesOfString:from withString:to];
-		}
-	}
-	
-	// replace "&"
-	display	= [display stringByReplacingOccurrencesOfString:@"&-" withString:@"&"];
-	
+	NSString* display = imapUTF7Decode( folderPath );
+        NSLog(@"Final: %@", display);	
 	return display;
 }
 
@@ -136,8 +295,8 @@
 			NSString* folderDisplayName = [self imapFolderNameToDisplayName:folderPath];
 			if ([StringUtil stringContains:folderDisplayName subString:@"&"]) {
 				folderDisplayName = @"";
-			}
-			
+			} 
+		 	NSLog( @"generated folder display name: %@ for %@", folderDisplayName, folderPath );
 			NSMutableDictionary* folderState = [NSMutableDictionary dictionaryWithObjectsAndKeys:
 													[NSNumber numberWithInt:0], @"accountNum", 
 													folderDisplayName, @"folderDisplayName",
@@ -189,8 +348,11 @@
 			NSString* folderDisplayName = folderPath;
 			if([folderPath isEqualToString:@"INBOX"]) {
 				folderDisplayName = @"Inbox"; // TODO(gabor): Localize name
-			} else if ([StringUtil stringContains:folderPath subString:@"&"]) {
+			} else {
+              folderDisplayName = [self imapFolderNameToDisplayName:folderPath];
+              if ([StringUtil stringContains:folderDisplayName subString:@"&"]) {
 				folderDisplayName = @"";
+              }
 			}
 			
 			NSMutableDictionary* folderState = [NSMutableDictionary dictionaryWithObjectsAndKeys:
