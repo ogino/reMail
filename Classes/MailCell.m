@@ -55,14 +55,18 @@
 }
 
 -(void)setTextWithPeople:(NSString*)people withSubject:(NSString*)subject withBody:(NSString*)body {
+	CGFloat contentWidth = self.contentView.size.width;
+
 	self.peopleLabel.text = [TTStyledText textFromXHTML:people lineBreaks:NO URLs:NO];
-	self.peopleLabel.frame = CGRectMake(26, 2, 205, 19);
+	self.peopleLabel.frame = CGRectMake(26, 2, contentWidth-180, 19);
 	
 	self.subjectLabel.text = [TTStyledText textFromXHTML:subject lineBreaks:NO URLs:NO];
-	self.subjectLabel.frame = CGRectMake(26, 24, 282, 17);
+	self.subjectLabel.frame = CGRectMake(26, 24, contentWidth-40, 17);
+	self.subjectLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 	
 	self.bodyLabel.text = [TTStyledText textFromXHTML:body lineBreaks:NO URLs:NO];
-	self.bodyLabel.frame = CGRectMake(26, 43, 282, 48);
+	self.bodyLabel.frame = CGRectMake(26, 43, contentWidth-40, 48);
+	self.bodyLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -71,4 +75,6 @@
 
     // Configure the view for the selected state
 }
+
+
 @end

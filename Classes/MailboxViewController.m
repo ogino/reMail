@@ -375,7 +375,7 @@ UIImage* imgAttachmentAllMail = nil;
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	NSDictionary* y;
-	
+		
 	if (indexPath.row < [self.emailData count]) {
 		y = [self.emailData objectAtIndex:indexPath.row];
 	} else {
@@ -482,5 +482,12 @@ UIImage* imgAttachmentAllMail = nil;
 	[self.navigationController pushViewController:mailViewController animated:YES];
 	[mailViewController release];
 }
+
+// Override to allow orientations other than the default portrait orientation.
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+	return YES;
+}
+
+
 @end
 

@@ -478,5 +478,12 @@ UIImage* imgAttachment = nil;
 	[self.navigationController pushViewController:mailViewController animated:YES];
 	[mailViewController release];
 }
+
+#pragma mark Rotation
+// Override to allow orientations other than the default portrait orientation.
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+	return YES;
+}
+
 @end
 

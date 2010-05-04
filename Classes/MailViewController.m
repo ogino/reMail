@@ -30,6 +30,27 @@
 #import "BuchheitTimer.h"
 #import "EmailProcessor.h"
 
+@interface MailViewController (Private)
+
+-(UIImageView*)createLine: (CGFloat) y;
+
+@end
+
+
+@implementation MailViewController (Private)
+
+-(UIImageView*)createLine: (CGFloat) y {
+	CGFloat contentWidth = self.scrollView.size.width;
+	UIImageView* line = [[[UIImageView alloc] init] autorelease];
+	line.backgroundColor = [UIColor darkGrayColor];
+	line.frame = CGRectMake(0,y,contentWidth,1);
+	line.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+	return line;
+}
+
+@end
+
+
 @interface PersonActionSheetHandler : NSObject<UIActionSheetDelegate> {
 	NSString* name;
 	NSString* address;
@@ -154,16 +175,15 @@
 	
 	UIActionSheet* aS = [[[UIActionSheet alloc] initWithTitle:title delegate:pash cancelButtonTitle:NSLocalizedString(@"Cancel",nil) destructiveButtonTitle:nil otherButtonTitles:
 							NSLocalizedString(@"Compose Email To",nil), NSLocalizedString(@"Copy Address",nil), NSLocalizedString(@"Copy Name",nil), nil] autorelease];
-	[aS showInView:[self.view window]];
+	[aS showInView:self.view];
 }
 
 - (IBAction)replyButtonWasPressed {
-	UIActionSheet* aS = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:NSLocalizedString(@"Cancel",nil) destructiveButtonTitle:nil otherButtonTitles:NSLocalizedString(@"Reply", nil), 
+	UIActionSheet* aS = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:NSLocalizedString(@"Cancel",nil) destructiveButtonTitle:NSLocalizedString(@"Delete", nil) otherButtonTitles:NSLocalizedString(@"Reply", nil), 
 						 NSLocalizedString(@"Reply All", nil), 
 						 NSLocalizedString(@"Forward", nil), 
-						 NSLocalizedString(@"Delete", nil), nil];
-	aS.destructiveButtonIndex = 3;
-	[aS showInView:[self.view window]];
+						 nil];
+	[aS showInView:self.view];
 	[aS release];
 }
 
@@ -229,7 +249,7 @@
 }
 
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-	if (buttonIndex == 3) { // Delete
+	if (buttonIndex == 0) { // Delete
 		UIAlertView* alertView = [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Delete Message?",nil) message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"Yes", @"No", nil] autorelease];
 		[alertView show];	
 		return;
@@ -248,7 +268,7 @@
 		}
 	}
 	
-	if(buttonIndex == 0) { //Reply
+	if(buttonIndex == 1) { //Reply
 		NSString* newSubject = self.email.subject;
 		if(!keepSubject) {
 			newSubject = [NSString stringWithFormat:@"Re: %@", self.email.subject];
@@ -260,7 +280,7 @@
 								  to:[NSArray arrayWithObject:self.email.senderAddress]
 								  cc:nil
 				  includeAttachments:NO];
-	} else if (buttonIndex == 1) { // Reply All
+	} else if (buttonIndex == 2) { // Reply All
 		NSString* newSubject = self.email.subject;
 		if(!keepSubject) {
 			newSubject = [NSString stringWithFormat:@"RE: %@", self.email.subject];
@@ -271,13 +291,13 @@
 								  to:[NSArray arrayWithObject:self.email.senderAddress]
 								  cc:[self replyAllRecipients]
 				  includeAttachments:NO]; //TODO(gabor): Look into In-Reply-To header
-	} else if (buttonIndex == 2) { // Forward
+	} else if (buttonIndex == 3) { // Forward
 		[self composeViewWithSubject:[NSString stringWithFormat:@"Fwd: %@", self.email.subject] 
 								body:[self replyString]
 								  to:nil 
 								  cc:nil
 				  includeAttachments:YES];
-	} else if (buttonIndex == 3) { // Delete
+	} else if (buttonIndex == 0) { // Delete
 		UIAlertView* alertView = [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Delete Message?",nil) message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"Yes", @"No", nil] autorelease];
 		[alertView show];	
 	}
@@ -438,9 +458,7 @@
 	toView.frame = CGRectMake(0, top, toSize.width, toSize.height);	
 	[addToView addSubview:toView];
 	
-	UIImageView* line = [[[UIImageView alloc] init] autorelease];
-	line.backgroundColor = [UIColor darkGrayColor];
-	line.frame = CGRectMake(0,toView.bottom,320,1);
+	UIImageView* line = [self createLine:toView.bottom];
 	[addToView addSubview:line];
 	
 	return line.bottom;
@@ -527,9 +545,7 @@
 	toView.frame = CGRectMake(0, top, toSize.width, toSize.height);	
 	[addToView addSubview:toView];
 	
-	UIImageView* line = [[[UIImageView alloc] init] autorelease];
-	line.backgroundColor = [UIColor darkGrayColor];
-	line.frame = CGRectMake(0,toView.bottom,320,1);
+	UIImageView* line = [self createLine:toView.bottom];
 	[addToView addSubview:line];
 	
 	return line.bottom;
@@ -596,6 +612,7 @@
 	self.subjectUIView.editable = NO;
 	self.subjectUIView.dataDetectorTypes = UIDataDetectorTypeAll;
 	self.subjectUIView.contentInset = UIEdgeInsetsMake(0,0,0,0);
+	self.subjectUIView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 	[self.subjectUIView setContentOffset:CGPointMake(0,8) animated:NO];
 	if(showTTView) { //only hide when we're showing the TT view as well
 		[self.subjectUIView setHidden:YES];
@@ -608,10 +625,9 @@
 	labelDate.textColor = [UIColor darkGrayColor];
 	labelDate.text = [dateFormatter stringFromDate:date];
 	[addToView addSubview:labelDate];
-	
-	UIImageView* line = [[[UIImageView alloc] init] autorelease];
-	line.backgroundColor = [UIColor darkGrayColor];
-	line.frame = CGRectMake(0,labelDate.bottom+1,320,1);
+
+	UIImageView* line = [self createLine: labelDate.bottom+1] ;
+		
 	[addToView addSubview:line];
 
 	if(showTTView) {
@@ -638,6 +654,7 @@
 	return line.bottom;
 }
 
+
 -(int)bodyBlock:(NSString*)body markedUp:(NSString*)bodyMarkedUp top:(int)top addToView:(UIView*)addToView showTTView:(BOOL)showTTView {
 	// not showing the TT view is an optimization for when we don't have any markup to show
 	if(showTTView) {
@@ -646,13 +663,16 @@
 		self.bodyTTLabel.textColor = [UIColor blackColor];
 	}
 	
-	self.bodyUIView = [[[UITextView alloc] initWithFrame:CGRectMake(-3, top, 326, 100)] autorelease];
+	CGFloat contentWidth = self.scrollView.size.width;
+	
+	self.bodyUIView = [[[UITextView alloc] initWithFrame:CGRectMake(-3, top, 382, 100)] autorelease];
 	self.bodyUIView.font = [UIFont systemFontOfSize:14];
 	self.bodyUIView.textColor = [UIColor blackColor]; 
 	self.bodyUIView.scrollEnabled = NO;
 	self.bodyUIView.editable = NO;
 	self.bodyUIView.dataDetectorTypes = UIDataDetectorTypeAll;
 	self.bodyUIView.text = body;
+	self.bodyUIView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 	[addToView addSubview:self.bodyUIView];
 	
 	if(showTTView) {
@@ -662,13 +682,13 @@
 	
 	int bottom = 0;
 	if(showTTView) {
-		self.bodyUIView.frame = CGRectMake(-3, top, 326, self.bodyTTLabel.bottom-top);
+		self.bodyUIView.frame = CGRectMake(-3, top, contentWidth, self.bodyTTLabel.bottom-top);
 		[self.bodyUIView setHidden:YES];
 		bottom = self.bodyTTLabel.bottom;
 		[addToView addSubview:self.bodyTTLabel];
 	} else {
 		CGSize size = [body sizeWithFont:self.bodyUIView.font constrainedToSize:CGSizeMake(300.0f,100000000.0f) lineBreakMode: UILineBreakModeWordWrap];
-		self.bodyUIView.frame = CGRectMake(-3, top, 326, size.height+24);
+		self.bodyUIView.frame = CGRectMake(-3, top, contentWidth, size.height+24);
 		bottom = self.bodyUIView.bottom;
 	}
 	
@@ -769,11 +789,11 @@
 
 
 - (void)loadView {
-	self.view = [[[[UIView class] alloc] initWithFrame:CGRectMake(0,0,320,460)] autorelease];
+	self.view = [[[[UIView class] alloc] initWithFrame:CGRectMake(0,0,320,480)] autorelease];
 	self.view.backgroundColor = [UIColor blackColor];
 		
 	// This is our real view, dude
-	self.scrollView = [[[[UIScrollView class] alloc] initWithFrame:CGRectMake(0,0,320,480-64)] autorelease];
+	self.scrollView = [[[[UIScrollView class] alloc] initWithFrame:CGRectMake(0,0,320,480)] autorelease];
 	self.scrollView.backgroundColor = [UIColor whiteColor];
 	self.scrollView.canCancelContentTouches = NO;
 	self.scrollView.showsVerticalScrollIndicator = YES;
@@ -796,6 +816,7 @@
 	[loadingLabel release];
 	
 	self.scrollView.contentSize = CGSizeMake(320, 180);
+	self.scrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	
 	self.title = @"eMail";
 	self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(replyButtonWasPressed)] autorelease];
@@ -949,4 +970,12 @@
     // Release anything that's not essential, such as cached data
 	NSLog(@"MailViewController received memory warning");
 }
+
+
+#pragma mark Rotation
+// Override to allow orientations other than the default portrait orientation.
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+	return YES;
+}
+
 @end

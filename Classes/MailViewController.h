@@ -63,6 +63,7 @@
 -(BOOL)matchText:(NSString*)text withQuery:(NSString*)queryLocal;
 -(NSString*)massageDisplayString:(NSString*)y;
 
+
 @property (nonatomic, retain) NSString *query;
 @property (assign) BOOL isSenderSearch; // YES if we're doing senderQuery
 

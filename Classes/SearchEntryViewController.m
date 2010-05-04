@@ -418,4 +418,11 @@ BOOL autoCompleteMode;
     // Release anything that's not essential, such as cached data
 	NSLog(@"SearchEntryViewController received memory warning");
 }
+
+#pragma mark Rotation
+// Override to allow orientations other than the default portrait orientation.
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+	return YES;
+}
+
 @end
