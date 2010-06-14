@@ -18,7 +18,8 @@
 //  limitations under the License.
 //
 
-#import <Three20/Three20.h>
+#import "Three20/Three20.h"
+#import "Three20UI/Headers/UIViewAdditions.h"
 #import <MessageUI/MessageUI.h>
 #import <UIKit/UIKit.h>
 #import "Email.h"

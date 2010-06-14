@@ -20,7 +20,7 @@
 
 #import <CommonCrypto/CommonDigest.h>
 #import "StringUtil.h"
-#import <Three20/NSStringAdditions.h>
+#import "Three20Core/NSStringAdditions.h"
 
 @implementation StringUtil
 
