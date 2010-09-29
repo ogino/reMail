@@ -23,7 +23,7 @@ mkdir -p ../../mailcore/libetpan/binaries
 cp -R binaries/Developer ../../mailcore/libetpan/binaries/Developer
 
 # libetpan needs openssl / cyrus-sasl to build correctly on iPhone 3.1+
-cp -r -v binaries/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/Debug/include/* ../../mailcore/libetpan/build-mac/include/.
+cp -r -v binaries/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.1.sdk/Debug/include/* ../../mailcore/libetpan/build-mac/include/.
 
 # this should be it - you can now open the ReMailIPhone Xcode project
 echo "Done - if you didn't see errors, you can now open the ReMailIPhone Xcode project"

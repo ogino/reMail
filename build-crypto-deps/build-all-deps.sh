@@ -8,7 +8,7 @@
 #   iPhoneOS            "Release" version
 #   iPhoneOS            "Debug" version
 #
-SDKLIST="3.0"
+SDKLIST="4.1"
 
 # list of libraries to cross-compile
 LIBRARIES="openssl cyrus-sasl"
