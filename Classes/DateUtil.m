@@ -48,8 +48,8 @@ static DateUtil *singleton = nil;
 	//TODO(gabor): Call this every hour or so to refresh what today, yesterday, etc. mean
 	NSCalendar *gregorian = [NSCalendar currentCalendar];
 	self.today = [NSDate date];
-	self.yesterday = [today addTimeInterval:-DATE_UTIL_SECS_PER_DAY];
-	self.lastWeek = [today addTimeInterval:-6*DATE_UTIL_SECS_PER_DAY];
+	self.yesterday = [today dateByAddingTimeInterval:-DATE_UTIL_SECS_PER_DAY];
+	self.lastWeek = [today dateByAddingTimeInterval:-6*DATE_UTIL_SECS_PER_DAY];
 	self.todayComponents = [gregorian components:(NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit) fromDate:today];
 	self.yesterdayComponents = [gregorian components:(NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit) fromDate:yesterday];
 	self.dateFormatter = [[[NSDateFormatter alloc] init] autorelease];

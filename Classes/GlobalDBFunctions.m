@@ -136,7 +136,7 @@ NSInteger intSortReverse(id num1, id num2, void *context){
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	
 	NSString *dbPath = [[ContactDBAccessor sharedManager] databaseFilepath];
-	NSDictionary *fsAttributes = [fileManager fileSystemAttributesAtPath:dbPath];
+	NSDictionary *fsAttributes = [fileManager attributesOfFileSystemForPath:dbPath error:nil];
 	if(fsAttributes != nil) {
 		return [[fsAttributes objectForKey:NSFileSystemFreeSize] unsignedLongLongValue];
 	}
@@ -164,7 +164,7 @@ NSInteger intSortReverse(id num1, id num2, void *context){
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	while (file = [dirEnum nextObject]) {
 		NSString *filePath = [attDirectory stringByAppendingPathComponent:file];
-		NSDictionary *fileAttributes = [fileManager fileAttributesAtPath:filePath traverseLink:YES];
+		NSDictionary *fileAttributes = [fileManager attributesOfItemAtPath:filePath error:nil];
 		
 		if (fileAttributes != nil) {
 			NSNumber *fileSize;
@@ -185,7 +185,7 @@ NSInteger intSortReverse(id num1, id num2, void *context){
 	// ContactDB 
 	NSString *dbPath = [[ContactDBAccessor sharedManager] databaseFilepath];
 	if(dbPath != nil) {
-		NSDictionary *fileAttributes = [fileManager fileAttributesAtPath:dbPath traverseLink:YES];
+		NSDictionary *fileAttributes = [fileManager attributesOfItemAtPath:dbPath error:nil];
 		if (fileAttributes != nil) {
 			NSNumber *fileSize;
 			if (fileSize = [fileAttributes objectForKey:NSFileSize]) {
@@ -197,7 +197,7 @@ NSInteger intSortReverse(id num1, id num2, void *context){
 	// UidDB
 	dbPath = [[UidDBAccessor sharedManager] databaseFilepath];
 	if(dbPath != nil) {
-		NSDictionary *fileAttributes = [fileManager fileAttributesAtPath:dbPath traverseLink:YES];
+		NSDictionary *fileAttributes = [fileManager attributesOfItemAtPath:dbPath error:nil];
 		if (fileAttributes != nil) {
 			NSNumber *fileSize;
 			if (fileSize = [fileAttributes objectForKey:NSFileSize]) {
@@ -213,7 +213,7 @@ NSInteger intSortReverse(id num1, id num2, void *context){
 	NSString* fileName;
 	while(fileName = [e nextObject]) {
 		NSString *dbPath = [StringUtil filePathInDocumentsDirectoryForFileName:fileName];
-		NSDictionary *fileAttributes = [fileManager fileAttributesAtPath:dbPath traverseLink:YES];
+		NSDictionary *fileAttributes = [fileManager attributesOfItemAtPath:dbPath error:nil];
 		
 		if (fileAttributes != nil) {
 			NSNumber *fileSize;

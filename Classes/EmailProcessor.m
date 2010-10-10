@@ -528,6 +528,12 @@ BOOL transactionOpen = NO; // caused effect (with firstOne): After we start up, 
 	// we do this because we don't want to interrupt imap fetching above
 	NSString* body = [data objectForKey:@"body"];
 	NSString* htmlBody = [data objectForKey:@"htmlBody"];
+
+  // Avoid attempts to insert nil value.
+  if (body == nil) {
+    body = @"";
+  }
+
 	if([body length] == 0 && [htmlBody length] > 0) {
 		body = [StringUtil flattenHtml:htmlBody];
 	} else {

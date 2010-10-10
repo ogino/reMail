@@ -64,7 +64,7 @@
 		return;
 	}
 	
-	[fileManager createDirectoryAtPath:attachmentDir attributes:nil];	
+	[fileManager createDirectoryAtPath:attachmentDir withIntermediateDirectories:NO attributes:nil error:nil];
 }
 
 +(NSString*)fileNameForAccountNum:(int)accountNum folderNum:(int)folderNum uid:(NSString*)uid attachmentNum:(int)attachmentNum {

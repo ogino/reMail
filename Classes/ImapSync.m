@@ -207,7 +207,7 @@
 				}
 				
 				NSLog(@"Error getting folder: %@", exp);
-				[sm syncWarning:[NSString stringWithFormat:NSLocalizedString(@"Error getting folder: %@", nil)]];
+				[sm syncWarning:[NSString stringWithFormat:NSLocalizedString(@"Error getting folder: %@", nil), folderPath]];
 				continue; 
 			}
 			
