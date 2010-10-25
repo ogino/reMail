@@ -386,6 +386,11 @@
 		NSString* senderAddress = [[msg.from anyObject] email];
 		NSString* subject = msg.subject;
 		NSDate* date = [msg sentDateGMT];
+		if(date == null) {
+			// if you couldn't get the sent date from the message, use a fake date in the distant past
+			date = [NSDate distantPast];
+		}
+		
 		NSString* datetime = [emailProcessor.dbDateFormatter stringFromDate:date];
 		// generate MD5 hash
 		NSString* md5hash = [EmailProcessor md5WithDatetime:datetime senderAddress:senderAddress subject:subject];
@@ -600,7 +605,12 @@
 				subject = msg.subject;
 				senderAddress = [[msg.from anyObject] email];
 				date = [msg sentDateGMT];
+				if(date == null) {
+					// if you couldn't get the sent date from the message, use a fake date in the distant past
+					date = [NSDate distantPast];
+				}
 				
+				// only fetch items from last 12 moths?
 				if(last12MosOnly) {
 					int timeInterval = [[NSDate date] timeIntervalSinceDate:date];
 					
