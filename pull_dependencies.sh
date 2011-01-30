@@ -1,6 +1,6 @@
 #!/usr/bin/sh
 # for this to work you need to have the following installed:
-# - Xcode 3.1.3 or higher: http://developer.apple.com/
+# - Xcode: http://developer.apple.com/
 # - git: http://help.github.com/mac-git-installation/
 # - mercurial / hg: http://mercurial.berkwood.com/
 
@@ -22,8 +22,11 @@ sh build-all-deps.sh `pwd`/binaries
 mkdir -p ../../mailcore/libetpan/binaries
 cp -R binaries/Developer ../../mailcore/libetpan/binaries/Developer
 
-# libetpan needs openssl / cyrus-sasl to build correctly on iPhone 3.1+
-cp -r -v binaries/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.1.sdk/Debug/include/* ../../mailcore/libetpan/build-mac/include/.
+# libetpan needs openssl / cyrus-sasl
+# NOTE: When compiling for iOS SDK versions, you'll need to change the line below
+#       to reflect the new version. The build-all-deps.sh script above will try
+#       reflect the usual library path structure for iOS libraries
+cp -r -v binaries/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Debug/include/* ../../mailcore/libetpan/build-mac/include/.
 
 # this should be it - you can now open the ReMailIPhone Xcode project
 echo "Done - if you didn't see errors, you can now open the ReMailIPhone Xcode project"

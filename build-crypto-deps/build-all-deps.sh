@@ -8,7 +8,10 @@
 #   iPhoneOS            "Release" version
 #   iPhoneOS            "Debug" version
 #
-SDKLIST="4.1"
+
+# NOTE: When changing the iOS SDK you're compiling against, you need
+#       to change the line below to reflect the new version
+SDKLIST="4.2"
 
 # list of libraries to cross-compile
 LIBRARIES="openssl cyrus-sasl"
