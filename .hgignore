@@ -3,6 +3,8 @@ syntax:glob
 # Xcode user state
 *.mode1v3
 *.pbxuser
+project.xcworkspace
+xcuserdata
 
 # Random stuff
 \#*

@@ -386,7 +386,7 @@
 		NSString* senderAddress = [[msg.from anyObject] email];
 		NSString* subject = msg.subject;
 		NSDate* date = [msg sentDateGMT];
-		if(date == null) {
+		if(date == nil) {
 			// if you couldn't get the sent date from the message, use a fake date in the distant past
 			date = [NSDate distantPast];
 		}
@@ -605,7 +605,7 @@
 				subject = msg.subject;
 				senderAddress = [[msg.from anyObject] email];
 				date = [msg sentDateGMT];
-				if(date == null) {
+				if(date == nil) {
 					// if you couldn't get the sent date from the message, use a fake date in the distant past
 					date = [NSDate distantPast];
 				}

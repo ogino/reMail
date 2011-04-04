@@ -1154,7 +1154,7 @@
 			isa = PBXGroup;
 			children = (
 				2A43579611C0CAF8009A6A60 /* libThree20.a */,
-				2A43579811C0CAF8009A6A60 /* UnitTests.octest */,
+				2A43579811C0CAF8009A6A60 /* Three20UnitTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1172,7 +1172,7 @@
 			isa = PBXGroup;
 			children = (
 				2A43585711C0D495009A6A60 /* libThree20Network.a */,
-				2A43585911C0D495009A6A60 /* UnitTests.octest */,
+				2A43585911C0D495009A6A60 /* NetworkUnitTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1181,7 +1181,7 @@
 			isa = PBXGroup;
 			children = (
 				2A43585D11C0D495009A6A60 /* libThree20Style.a */,
-				2A43585F11C0D495009A6A60 /* UnitTests.octest */,
+				2A43585F11C0D495009A6A60 /* StyleUnitTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1190,7 +1190,7 @@
 			isa = PBXGroup;
 			children = (
 				2A43586311C0D495009A6A60 /* libThree20UICommon.a */,
-				2A43586511C0D495009A6A60 /* UnitTests.octest */,
+				2A43586511C0D495009A6A60 /* UICommonUnitTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1199,7 +1199,7 @@
 			isa = PBXGroup;
 			children = (
 				2A43586911C0D495009A6A60 /* libThree20UINavigator.a */,
-				2A43586B11C0D495009A6A60 /* UnitTests.octest */,
+				2A43586B11C0D495009A6A60 /* UINavigatorUnitTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1208,7 +1208,7 @@
 			isa = PBXGroup;
 			children = (
 				2A43586F11C0D495009A6A60 /* libThree20UI.a */,
-				2A43587111C0D495009A6A60 /* UnitTests.octest */,
+				2A43587111C0D495009A6A60 /* UIUnitTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1261,6 +1261,7 @@
 			isa = PBXProject;
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "ReMailIPhone" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -1321,10 +1322,10 @@
 			remoteRef = 2A43579511C0CAF8009A6A60 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		2A43579811C0CAF8009A6A60 /* UnitTests.octest */ = {
+		2A43579811C0CAF8009A6A60 /* Three20UnitTests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = UnitTests.octest;
+			path = Three20UnitTests.octest;
 			remoteRef = 2A43579711C0CAF8009A6A60 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1349,10 +1350,10 @@
 			remoteRef = 2A43585611C0D495009A6A60 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		2A43585911C0D495009A6A60 /* UnitTests.octest */ = {
+		2A43585911C0D495009A6A60 /* NetworkUnitTests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = UnitTests.octest;
+			path = NetworkUnitTests.octest;
 			remoteRef = 2A43585811C0D495009A6A60 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1363,10 +1364,10 @@
 			remoteRef = 2A43585C11C0D495009A6A60 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		2A43585F11C0D495009A6A60 /* UnitTests.octest */ = {
+		2A43585F11C0D495009A6A60 /* StyleUnitTests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = UnitTests.octest;
+			path = StyleUnitTests.octest;
 			remoteRef = 2A43585E11C0D495009A6A60 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1377,10 +1378,10 @@
 			remoteRef = 2A43586211C0D495009A6A60 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		2A43586511C0D495009A6A60 /* UnitTests.octest */ = {
+		2A43586511C0D495009A6A60 /* UICommonUnitTests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = UnitTests.octest;
+			path = UICommonUnitTests.octest;
 			remoteRef = 2A43586411C0D495009A6A60 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1391,10 +1392,10 @@
 			remoteRef = 2A43586811C0D495009A6A60 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		2A43586B11C0D495009A6A60 /* UnitTests.octest */ = {
+		2A43586B11C0D495009A6A60 /* UINavigatorUnitTests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = UnitTests.octest;
+			path = UINavigatorUnitTests.octest;
 			remoteRef = 2A43586A11C0D495009A6A60 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1405,10 +1406,10 @@
 			remoteRef = 2A43586E11C0D495009A6A60 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		2A43587111C0D495009A6A60 /* UnitTests.octest */ = {
+		2A43587111C0D495009A6A60 /* UIUnitTests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = UnitTests.octest;
+			path = UIUnitTests.octest;
 			remoteRef = 2A43587011C0D495009A6A60 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1860,7 +1861,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = reMail;
-				SDKROOT = iphonesimulator4.1;
+				SDKROOT = iphoneos;
 			};
 			name = Distribution;
 		};
@@ -1913,7 +1914,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = reMail;
-				SDKROOT = iphonesimulator4.1;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -1964,7 +1965,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = reMail;
-				SDKROOT = iphonesimulator4.1;
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};
